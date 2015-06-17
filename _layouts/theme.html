@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+   {% include header.html %}
+
+   <div class="page-content">
+      <div class="wrapper">
+         <div class="left-post-wrapper">
+            <div class="blog-posts-navigation">
+               <h3>Bloggposter</h3>
+               <ul>
+                  <li><a href="">asd</a></li>
+                  <li><a href="">cxz</a></li>
+                  <li><a href="">qwert</a></li>
+                  <li><a href="">bnmn</a></li>
+                  <li><a href="">poiu</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="right-post-wrapper">
+            <div class="blog-post">
+               <h1>
+                  {{ page.title}}
+               </h1>
+               {{ content }}
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   {% include footer.html %}
+</body>
+
+</html>

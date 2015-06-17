@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h1>INNEHÅLL - index.html, layout: default</h1>
+
+Blogg:
+<ul>
+   {% for post in site.posts %}
+   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+   {% endfor %}
+</ul>
+
+Teman:
+<ul>
+   {% for theme in site.themes %}
+   <li><a href="{{theme.url}}">{{ theme.title }}</a></li>
+   {% endfor %}
+</ul>

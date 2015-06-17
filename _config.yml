@@ -1,0 +1,16 @@
+markdown: kramdown
+permalink: pretty
+
+# include: ['_includes/work']
+# exclude: ['the_design.psd']
+exclude: [node_modules, package.json, npm-debug.log, gulpfile.js]
+
+sass:
+  sass_dir: assets/css
+  # style: :nested
+
+
+collections:
+   themes:
+       output: true
+       permalink: /themes/:path/
