@@ -1,3 +1,8 @@
+.post-parent
+   // background: honeydew
+   padding: 20px auto
+   div
+      margin: 20px auto 10px
 .left-post-wrapper
    // background: blue
    // height: 400px
@@ -9,7 +14,7 @@
       *
          padding: 0px
          margin: 0px
-      margin: 0px
+      margin: 10px 2px
       background: $dark-gray
       width: auto
       padding: 10px
@@ -23,27 +28,39 @@
       li
          border-top: 1px #eee solid
          padding-bottom: 2px
-
+$serif: 'Roboto Slab', serif
 .right-post-wrapper
    @include span-columns(9)
    padding-left: 20px
-   border-left: 1px $dark-gray solid
+   border-left: 1px $light-medium-gray solid
 
    .blog-post
       width: 85%
+      // @include fill-parent
       *
          clear: both
          padding: 0px
          margin: 8px 0px
 
       h1,h2,h3,h4
+         font-family: $helvetica
          color: $semi-dark-gray
       h1, h2
+         font-family: $serif
+         font-weight: 400
          margin-top: 6px
       h3
          font-style: italic
+      p.post-intro
+         font:
+            family: $georgia
+            size: 1.2em
+            weight: 400
       p
-         color: $semi-dark-gray
+         // color: $semi-dark-gray
+         font-family: $serif
+         font-weight: 300
+         line-height: 1.6em
       a
          color: $medium-gray
          font:
@@ -60,13 +77,20 @@
             font:
                style: italic
 
+      .test
+
+
+      img-small
+
       .bild-text
          margin-top: -10px
 
       .date
          color: $medium-gray
-         font-style: italic
+         font:
+            size: 0.9em
+            weight: 200
 
       .subject
          color: $medium-gray
-         border-bottom: 1px solid red
+         border-bottom: 3px solid tomato

@@ -1,0 +1,155 @@
+%red
+   color: blue
+.parent
+   width: 200px
+   min-height: 200px
+   background: green
+   position: relative
+   .child
+      width: 100px
+      min-height: 100px
+      +span-columns(6)
+      background: red
+      color: white
+   .child2
+      min-width: 90px
+      min-height: 90px
+      position: absolute
+      +span-columns(1)
+      height: 70%
+      background: gold
+      display: inline-block
+.flex-parent
+   // @include size(800px 400px)
+   // +outer-container
+   padding: 10px
+   // height: 400px
+   background: olive
+   margin: auto
+   +display(flex)
+
+   +flex-direction(row)
+   +flex-wrap(wrap)
+   +align-content(space-around)
+   // @include justify-content(space-between)
+   .flex-child
+      +size(150px)
+      margin: 2px 2px 2px 0px
+      &:nth-child(1)
+         margin-left: 2px
+      background: coral
+      @include flex-basis(300px)
+      // @include flex(1)
+
+#themes-intro-section
+   background: tomato
+   color: lighten($light-text, 10)
+
+#themes-section
+   background: $white
+   section
+      padding: 10px 0
+      +span-columns(12)
+      // background: lightblue
+      +media($desktop)
+         // padding: 10px
+      .theme-media-object
+
+
+         +media($desktop)
+            +span-columns(6)
+            +omega(2n)
+         +media($tablet)
+            +span-columns(7)
+            +shift(0.5)
+            // +omega(n)
+         // +outer-container
+         // +display(flex)
+         // @include align-items(center)
+         // @include flex-direction(row)
+         // @include flex-wrap(wrap)
+         // @include align-content(space-around)
+         // @include justify-content(space-between)
+         background: #f7f7f7
+         box-shadow: 1px 0px 2px #999
+         color: $dark-text
+         margin: 10px 0 10px
+         min-height: 200px
+         // display: block
+         padding: 10px
+         position: relative
+         h3.top-h3
+            font-size: 1.7em
+            text-align: center
+            margin-top: -10px
+            padding: 0px auto 10px
+         div
+            // background: red
+            // display: inline-block
+            min-height: 200px
+            +span-columns(6)
+            // @include flex-basis(20em)
+            // @include flex-grow(1)
+         .img-holder
+            +clearfix
+            position: absolute
+            // +fill-parent
+            +span-columns(6)
+            height: calc(100% - 20px)
+            background: $soft-gray
+            .img
+               +size(100%)
+               float: right
+               margin-top: 0px
+               background:
+                  size: cover
+                  image: url("http://www.fillmurray.com/700/700")
+                  position: 50% 50%
+         &:nth-child(2)
+            .img-holder
+               .img
+                  background-image: url("http://www.fillmurray.com/400/400")
+         &:nth-child(3)
+            .img-holder
+               .img
+                  background-image: url("http://www.fillmurray.com/400/600")
+         .info
+            +shift(6)
+            padding-left: 10px
+            h3
+               color: red
+               text-align: left
+               padding-bottom: 2px
+               font-size: 24px
+               span
+
+                  color: lighten($dark-text, 10)
+                  font:
+                     size: 22px
+                     weight: 300
+               padding-top: 0px
+            p
+               padding-left: 2px
+               word-wrap: break-word
+            a
+               // position: absolute
+               width: 100%
+               // bottom: 0
+               color: fade-out($dark-text, 0.12)
+               font:
+                  size: 1.1em
+                  weight: 500
+               div
+                  width: 100%
+                  min-height: 40px
+                  margin-bottom: 0px
+                  padding: 4px 8px 6px 15px
+
+                  border:
+                     color: fade-out($dark-text, 0.15)
+                     width: 2px
+                     style: solid
+            // +size(100px)
+            // @include flex-basis(10px)
+            // @include flex(1)
+            // background: lightgreen

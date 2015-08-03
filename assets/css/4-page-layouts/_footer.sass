@@ -1,13 +1,70 @@
 
 footer
    width: 100%
-   background: $dark-bg
-   color: $light-text
-   text-align: center
-   height: 300px
+   min-height: 300px
+   background: $footer-bg
+   //text-align: center
+   .footer-parent
+      // background: grey
+      @include direction-context(left-to-right)
+      @include span-columns(12)
+      min-height: 200px
+      .footer-sections
+         // background: green
+         min-height: 100px
+         // @include direction-context(left-to-right)
+         @include span-columns(7)
+         +shift(2.5)
+         .footer-section
+            // background: orange
+            @include direction-context(left-to-right)
+            margin-left: 0px
+            @include span-columns(4)
+            +omega(3)
+            text-align: center
+            min-height: 100px
+            .footer-section-header
+               margin-top: 15px
+               //margin-left: 10px
+               //margin-right: 10px
+            ul
+               list-style: none
+               margin-top: 20px
+               margin-bottom: 10px
+               li
+                  color: black
+                  //margin-bottom: 10px
 
-   .footer-section
-      display: inline-block
-      margin: 30px 60px
-      ul
-         list-style: none
+            //.footer-section-headerfor
+               width: 100px
+               margin-top: 15px
+
+   .footer-logos
+      //background: red
+      min-height: 100px
+      @include direction-context(left-to-right)
+      @include span-columns(7)
+      +shift(2.5)
+
+      .footer-logo
+         //background: pink
+         @include direction-context(left-to-right)
+         @include span-columns(4)
+         margin-left: 0px
+         min-height: 100px
+         text-align: center
+         display: flex
+         align-items: center
+         justify-content: center
+         margin-top: 30px
+         margin-bottom: 30px
+
+         .footer-logo-bildliu
+            max-height: 40px
+
+         .footer-logo-bildlu
+            max-height: 100px
+
+
+         .footer-logo-bildetg
+            max-height: 35px

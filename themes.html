@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div class="section-parent" id="themes-intro-section">
+   <div class="wrapper">
+      <section >
+         <h1>Teman</h1>
+         Temann:
+         <ul>
+            {% for theme in site.themes %}
+            <li><a href="{{theme.url}}">{{ theme.short }}</a></li>
+            {% endfor %}
+         </ul>
+      </section>
+   </div>
+</div>
+
+
+
+<div class="section-parent" id="themes-section">
+   <div class="wrapper">
+      <section >
+
+         <div class="theme-media-object">
+            <div class="img-holder"><div class="img"></div></div>
+            <div class="info">
+               <h3><span>Tema 1 - </span>Introduktion</h3>
+               <p class="theme-media-intro">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo delectus odio eum okejsanådmammapappaasdasdasdasdasdasdasdasdas.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo delectus odio eum.
+               </p>
+               <a href="#"><div>Gå till materialet</div></a>
+            </div>
+         </div>
+
+         <div class="theme-media-object">
+            <div class="img-holder">
+               <div class="img"></div>
+            </div>
+            <div class="info">
+               <h3><span>Tema 2 - </span>Digitala läromedel idag</h3>
+               <p class="theme-media-intro">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo delectus odio eum okejsanådmammapappaasdasdasdasdasdasdasdasdas.
+               </p>
+               <a href="#"><div>Gå till materialet</div></a>
+            </div>
+         </div>
+
+         <div class="theme-media-object">
+            <div class="img-holder">
+               <div class="img"></div>
+            </div>
+            <div class="info"></div>
+         </div>
+
+         <div class="theme-media-object">
+            <div class="img-holder">
+               <div class="img"></div>
+            </div>
+            <div class="info"></div>
+         </div>
+
+      </section>
+   </div>
+</div>

@@ -8,7 +8,7 @@ subject: Forskningsprojektet
 
 ---
 
-## Hello, thank you and please, en underrubrik
+## Hello, thank you and please, en rubrik
 
 
 this is a normal paragraph of text. with some words
@@ -23,9 +23,9 @@ and spaces. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu
 1. Var kritisk men ändå öppen när du kikar på nya digitala läromedel
 1. Ha kul
 
-![man i glasögon](http://www.leiendecker-bloas.de/admin/clients/leiendecker/media/bilder_Bild_519.jpg 'title text'){:man-image-closeup: #myid .img-small}
+<!-- ![man i glasögon](http://www.leiendecker-bloas.de/admin/clients/leiendecker/media/bilder_Bild_519.jpg 'title text'){:man-image-closeup: #myid .img-small} -->
 
-*En bildtext*{:.bild-text}
+<!-- *Bild på en gubbe*{:.bild-text} -->
 
 ---
 

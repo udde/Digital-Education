@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html>
-
 {% include head.html %}
-
 <body>
    {% include header.html %}
-
    <div class="page-content">
-      <div class="wrapper">
-         <div class="left-post-wrapper">
-            <div class="blog-posts-navigation">
-               <h3>Blogginlägg</h3>
-               <ul>
-                  <li><a href="">asd</a></li>
-                  <li><a href="">cxz</a></li>
-                  <li><a href="">qwert</a></li>
-                  <li><a href="">bnmn</a></li>
-                  <li><a href="">poiu</a></li>
-               </ul>
-            </div>
+      <div class="post-parent">
+         <div class="wrapper">
+
+               <article class="post">
+                  <p class="type">Article Type</p>
+                  <h1>Article Heading</h1>
+                  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio, explicabo. Id consequatur dolor perspiciatis sit deserunt nam atque eum repellendus ipsum, unde illo eveniet nesciunt ad facere, officia possimus.</h2>
+                  <p class="date">30 Mar 2014</p>
+                  <hr>
+                  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+                     <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+                  </p>
+                  <h3>Subheading lorem</h3>
+                  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+                  <hr>
+                  <p class="author">Author Name</p>
+               </article>
+
          </div>
-         <div class="right-post-wrapper">
-            <div class="blog-post">
-               <span class="subject">{{ page.subject }}</span>
-               <h1>
-                  {{ page.title}}
-               </h1>
-               <span class="date">
-                  {{ page.date | date: "%-d %B %Y" }}
-               </span>
-               {{ content }}
+      </div>
+      <div class="post-parent">
+         <div class="wrapper">
+
+            <div class="left-post-wrapper">
+               <div class="blog-posts-navigation">
+                  <h3>Blogginlägg</h3>
+                  <ul>
+                     <li><a href="">asd</a></li>
+                     <li><a href="">cxz</a></li>
+                     <li><a href="">qwert</a></li>
+                     <li><a href="">bnmn</a></li>
+                     <li><a href="">poiu</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-post-wrapper">
+               <article class="blog-post">
+                  {% for tag in page.subject %}
+                  <a class="subject">{{ tag }}</a>
+                  {% endfor %}
+                  <h1>
+                     {{ page.title}}
+                  </h1>
+                  <p class="post-intro">
+                     {{ page.intro}}
+                  </p>
+                  <span class="date">
+                     {{ page.date | date: "%-d %B %Y" }}
+                  </span>
+                  {{ content }}
+               </article>
             </div>
          </div>
       </div>
    </div>
-
 
    {% include footer.html %}
 </body>

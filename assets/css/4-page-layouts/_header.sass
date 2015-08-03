@@ -1,38 +1,87 @@
+// .fixed
+//    position: fixed
+//    top: 0
+//    background: $header-bg
 
+// .fixed-header-margin
+//    margin-top: 57px
+.nav-item-active
+   border-color: $nav-accent
+   background: darken($header-bg, 3%)
+   color: inherit
+   // color: lighten($header-color, 100%)
+
+.header-scrolled
+   position: fixed
+   width: 100%
+   top: 0
+.header-buffer
+   width: auto
+   height: 62px
+   opacity: 0.0
+   background: rgba(0,0,0,0)
 header
    *
       margin: 0px
       padding: 0px
+   box-shadow: 1px 1px 1px #777
+
+   position: relative
+   margin-bottom: -62px
+   z-index: 100
+
+   // min-height: $header-height
+   // min-height: 62px
+
    width: 100%
-   background: $dark-bg
-   text-align: left
+
+   background: $header-bg
+
    .wrapper
-      padding: 5px 10px 10px
+      // padding: 5px 10px 10px
    .logo
       width: 30%
-      display: inline-block
+      display: none
+      //inline-block
       h1
-         // text-align: left
-         // background: coral
-         // float: left
          font:
             size: 36px
          color: $light-text
 
    nav
-      clear: left
-      display: inline-block
-      width: 69%
-      // background: pink
-      text-align: right
+      +display(flex)
+      +flex-direction(column)
+      // height: 50px
       ul
+         +flex(1)
+         // background: blue
+         list-style: none
+         +display(flex)
+         +flex-flow(row-wrap)
+         +justify-content(space-between)
+         // +flex-direction(row)
+
          li
-            display: inline
-            margin-left: 15px
+            +flex(1)
+            &:nth-child(3)
+               +flex(1.7)
             a
-               color: $light-text
+               border-bottom: 12px $header-bg solid
+               padding: 16px 0 10px
+               +transition
+               +flex(1)
+               +display(flex)
+               background: $header-bg
+               +flex-direction(column)
+               +justify-content(center)
+               text-align: center
+               // min-height: 62px
+               // min-height: $header-height
+               color: $header-color
                font:
-                  size: 20px
+                  size: 1.1em
                   weight: 700
+               +media($tablet)
+                  font-size: 0.9em
                &:hover
-                  color: $light-medium-gray
+                  @extend .nav-item-active
