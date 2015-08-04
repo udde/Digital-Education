@@ -8,12 +8,88 @@
 
    <div class="page-content">
       <div class="wrapper">
-         <div class="right-post-wrapper">
-            <div class="blog-post">
-               <h1>
-                  {{ page.title}}
-               </h1>
-               {{ content }}
+         <div class="theme">
+            <h1>
+               {{ page.title}}
+            </h1>
+            <hr>
+            <h4>
+               {{ page.short }}
+            </h4>
+            <hr>
+            {{ content }}
+            <hr>
+         </div>
+
+         {% for c in site.themes %}
+         {% if c.title == page.title %}
+         {% assign thisPost = c %}
+         {% if forloop.index == 1 %}
+         {% assign prevflag = 0 %}
+         {% assign nextflag = 1 %}
+         {% elsif forloop.index == forloop.length %}
+         {% assign prevflag = 1 %}
+         {% assign nextflag = 0 %}
+         {% else %}
+         {% assign prevflag = 1 %}
+         {% assign nextflag = 1 %}
+         {% endif %}
+         {% endif %}
+         {% endfor %}
+
+         {% for c in site.themes %}
+         {% if c.title == page.title %}
+         {% assign prevflag = 0 %}
+         {% endif %}
+         {% if prevflag == 1 %}
+         {% assign prevPost = c %}
+         {% assign page.previous = c %}
+         {% endif %}
+         {% endfor %}
+
+         {% if nextflag == 1 %}
+         {% for c in site.themes %}
+         {% if foundPost == 1 %}
+         {% assign getNext = 1 %}
+         {% endif %}
+         {% if c.title == page.title %}
+         {% assign foundPost = 1 %}
+         {% endif %}
+         {% if getNext == 1%}
+         {% assign nextPost = c %}
+         {% assign page.next = c %}
+         {% assign foundPost = 0 %}
+         {% assign getNext = 0 %}
+         {% endif %}
+         {% endfor %}
+         {% endif %}
+
+         <div class="theme-nav">
+            <div >
+               {% if prevPost.url %}
+               <a class="prev" href="{{prevPost.url}}">
+                  <i class="fa fa-arrow-left"></i> Föregående Tema
+               </a>
+               {% else %}
+               <a class="prev disable-button" href="{{prevPost.url}}">
+                  <i class="fa fa-arrow-left"></i> Föregående Tema
+               </a>
+               {% endif %}
+
+
+               <a href="/themes"><i class="fa fa-list"></i> Alla Teman </a>
+               <a href="javascript:window.print()">Skriv ut Tema <i class="fa fa-print"></i></a>
+
+
+               {% if nextPost.url %}
+               <a class="next" href="{{nextPost.url}}">
+                  Nästa Tema <i class="fa fa-arrow-right"></i>
+               </a>
+               {% else %}
+               <a class="next disable-button" href="{{nextPost.url}}">
+                  Nästa Tema <i class="fa fa-arrow-right"></i>
+               </a>
+               {% endif %}
             </div>
          </div>
       </div>

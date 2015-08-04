@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.7.0",
-    "gulp": "^3.8.11",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.8.11"
   },
   "dependencies": {
     "app-cwd": "^0.1.0"

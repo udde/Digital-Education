@@ -6,21 +6,27 @@ layout: default
    <div class="wrapper">
       <section >
          <h1>Teman</h1>
-         Temann:
-         <ul>
-            {% for theme in site.themes %}
-            <li><a href="{{theme.url}}">{{ theme.short }}</a></li>
-            {% endfor %}
-         </ul>
       </section>
    </div>
 </div>
 
-
-
 <div class="section-parent" id="themes-section">
    <div class="wrapper">
-      <section >
+      <section>
+         {% for t in site.themes %}
+         <div class="theme-media-object">
+            <div class="img-holder">
+               <div class="img"></div>
+            </div>
+            <div class="info">
+               <h3><span>Tema {{ forloop.index }} <br> </span> {{ t.title }} </h3>
+               <p class="theme-media-intro">
+                  {{ t.short }}
+               </p>
+               <a href="{{ t.url }}"><div>Gå till materialet</div></a>
+            </div>
+         </div>
+         {% endfor %}
 
          <div class="theme-media-object">
             <div class="img-holder"><div class="img"></div></div>
