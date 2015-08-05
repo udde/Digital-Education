@@ -10,19 +10,19 @@ $(function(){
    console.log("header: " + $header.height());
    $content = $('.page-content');
 
-   $(window).scroll( function () {
-      // console.log("header: " + $header.height());
-      // console.log("banner: " + banner.height());
-      // console.log(banner.height() - $header.height());
-      if($(window).scrollTop() > banner.height() - $header.height()) {
-         $header.addClass('header-scrolled');
-         // $content.addClass('fixed-header-margin');
-      }
-      else {
-         $header.removeClass('header-scrolled');
-         // $content.removeClass('fixed-header-margin');
-      }
-   });
+   // $(window).scroll( function () {
+   //    // console.log("header: " + $header.height());
+   //    // console.log("banner: " + banner.height());
+   //    // console.log(banner.height() - $header.height());
+   //    if($(window).scrollTop() > banner.height() - $header.height()) {
+   //       $header.addClass('header-scrolled');
+   //       // $content.addClass('fixed-header-margin');
+   //    }
+   //    else {
+   //       $header.removeClass('header-scrolled');
+   //       // $content.removeClass('fixed-header-margin');
+   //    }
+   // });
 
    setActiveNavItem();
 

@@ -8,14 +8,21 @@
    text-align: center
    @media print
       text-align: left
+      background-color: white
 
    margin: 0px auto
    // background: coral
    padding: 0px
-
+   a
+      @media print
+         color: black
+         pointer-events: none
+         cursor: default
    h1
       padding: 20px 0 0px
       margin-bottom: 0px
+      @media print
+         margin-bottom: 20px
    hr
       @media print
          display: none
@@ -27,7 +34,7 @@
          font-family: $serif
          font-weight: 400
          line-height: 1.8em
-         margin-top: 0px
+         margin-top: 4px
          // line-height: 2.0
 
    .video-wrapper
@@ -43,6 +50,10 @@
       font-family: $serif
       font-weight: 400
       margin-top: 6px
+   h2
+      margin: 20px 0 10px
+      @media print
+         // margin-bottom: 5px
    h3
       font-style: italic
 .theme-nav
@@ -56,17 +67,24 @@
          margin: 10px 5px
       //    &:nth-child(3)
       //       display: none
-
-      font-size: 2.2vh
+      font-size: 14px
+      +media($desktop)
+         font-size: 16px
       i
          margin-left: 10px
+         color: $accent-color
       &:nth-child(1),&:nth-child(2)
          i
             margin: 0 10px 0 0
+      &:hover
+         background-color: darken($header-bg,2)
+         i
+            // color: $funky-carrot
+
+      background-color: $header-bg
       box-shadow: 0px 1px 1px $semi-dark-gray
       color: $semi-dark-gray
       display: inline-block
       font-weight: 600
       margin: 10px
-      background-color: $light-gray
       padding: 10px

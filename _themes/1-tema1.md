@@ -1,5 +1,5 @@
 ---
-layout: theme
+layout: 'theme'
 title: 'Det första temat'
 short: 'kortare beskrivning om temat här. Bla bla bla.'
 video: 'http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&iv_load_policy=3&controls=0'

@@ -1,49 +1,52 @@
 %red
    color: blue
-.parent
-   width: 200px
-   min-height: 200px
-   background: green
-   position: relative
-   .child
-      width: 100px
-      min-height: 100px
-      +span-columns(6)
-      background: red
-      color: white
-   .child2
-      min-width: 90px
-      min-height: 90px
-      position: absolute
-      +span-columns(1)
-      height: 70%
-      background: gold
-      display: inline-block
-.flex-parent
-   // @include size(800px 400px)
-   // +outer-container
-   padding: 10px
-   // height: 400px
-   background: olive
-   margin: auto
-   +display(flex)
+// .parent
+//    width: 200px
+//    min-height: 200px
+//    background: green
+//    position: relative
+//    .child
+//       width: 100px
+//       min-height: 100px
+//       +span-columns(6)
+//       background: red
+//       color: white
+//    .child2
+//       min-width: 90px
+//       min-height: 90px
+//       position: absolute
+//       +span-columns(1)
+//       height: 70%
+//       background: gold
+//       display: inline-block
+// .flex-parent
+//    // @include size(800px 400px)
+//    // +outer-container
+//    padding: 10px
+//    // height: 400px
+//    background: olive
+//    margin: auto
+//    +display(flex)
+//
+//    +flex-direction(row)
+//    +flex-wrap(wrap)
+//    +align-content(space-around)
+//    // @include justify-content(space-between)
+//    .flex-child
+//       +size(150px)
+//       margin: 2px 2px 2px 0px
+//       &:nth-child(1)
+//          margin-left: 2px
+//       background: coral
+//       @include flex-basis(300px)
+//       // @include flex(1)
 
-   +flex-direction(row)
-   +flex-wrap(wrap)
-   +align-content(space-around)
-   // @include justify-content(space-between)
-   .flex-child
-      +size(150px)
-      margin: 2px 2px 2px 0px
-      &:nth-child(1)
-         margin-left: 2px
-      background: coral
-      @include flex-basis(300px)
-      // @include flex(1)
 
 #themes-intro-section
    background: darken($section-bg-3, 0)
    color: lighten($light-text, 10)
+   a
+      // @extend .link
 
 #themes-section
    background: $white

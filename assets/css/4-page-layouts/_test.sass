@@ -1,16 +1,59 @@
-h1,h2,h3,h4
-   margin: 0
-   padding: 10px 0
+.color-box
+   display: inline-block
+   +size(200px)
+   margin: 2px
+   &:nth-child(1)
+      background: $section-bg-0
+   &:nth-child(2)
+      background: $section-bg-1
+   &:nth-child(3)
+      background: $section-bg-2
+   &:nth-child(4)
+      background: $section-bg-3
+   &:nth-child(5)
+      background: $section-bg-4
+   &:nth-child(6)
+      background: $section-bg-5
+   &:nth-child(7)
+      background: $blue
+   &:nth-child(8)
+      background: $flamingo-pink
+   &:nth-child(9)
+      background: $light-teal
+   &:nth-child(10)
+      background: $funky-carrot
+
+
+   background: $section-bg-1
+.font1
+   h1
+      margin-top: 100px
+   h1,h2,h3,p
+      font-family: $helvetica
+   p, h2
+      font-weight: 300
+
+.font2
+   h1,h2,h3,p
+      font-family: 'Open Sans'
+
+.font3
+   h1,h2,h3,p
+      font-family: $verdana
+
+// h1,h2,h3,h4
+//    margin: 0
+//    padding: 10px 0
 
 iframe
    +size(900px 600px)
    box-shadow: 1px 1px 4px black
 
-html
-   height: 100%
-   position: relative
+// html
+//    height: 100%
+//    position: relative
 body.start-body
-   padding-top: 91vh
+   // padding-top: 91vh
    // padding-top: calc(100vh - 63px)
 
 .overlay-olive
@@ -23,6 +66,7 @@ body.start-body
    //fixed -> bilden stanar och körs över
    position: relative
    position: fixed
+   // display: none
    z-index: -10
    top: 0px
    width: 100%

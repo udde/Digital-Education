@@ -1,3 +1,7 @@
+// $sans-serif =  'Open Sans'
+// $serif = 'Roboto Slab'
+// $helvetica =  'Helvetica Nue'
+   
 body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -23,33 +27,35 @@ p {
   margin: 0 0 $small-spacing;
 }
 
-a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color 0.1s linear;
+a,.link {
 
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($action-color, 15%);
-  }
+   color: $link-color;
+   text-decoration: none;
+   transition: color 0.1s linear;
 
-  &:active,
-  &:focus {
-    outline: none;
-  }
+   &:active,
+   &:focus,
+   &:hover {
+     color: darken($link-color, 10%);
+   }
+
+   &:active,
+   &:focus {
+     outline: none;
+   }
 }
 
-hr {
-  border-bottom: $base-border;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: $base-spacing 0;
-}
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-}
+// hr {
+//   border-bottom: $base-border;
+//   border-left: none;
+//   border-right: none;
+//   border-top: none;
+//   margin: $base-spacing 0;
+// }
+//
+// img,
+// picture {
+//   margin: 0;
+//   max-width: 100%;
+// }
