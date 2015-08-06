@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+   {% include header.html %}
+   <script>
+   document.getElementById("navLink3").className += " nav-item-active";
+   </script>
+   <div class="page-content">
+      <div class="section-parent" id="themes-intro-section">
+         <div class="wrapper">
+            <section>
+               <h1>
+                  {{ page.title }}
+               </h1>
+               <p>
+                  {{ page.short }}
+               </p>
+            </section>
+         </div>
+      </div>
+      <div class="section-parent">
+         <div class="wrapper">
+            <section>
+               {{ content }}
+            </section>
+         </div>
+      </div>
+   </div>
+   {% include footer.html %}
+</body>
+
+</html>

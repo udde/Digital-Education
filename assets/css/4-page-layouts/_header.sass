@@ -26,7 +26,7 @@ header
    *
       margin: 0px
       padding: 0px
-   box-shadow: 1px 1px 1px #777
+   // box-shadow: 0px 2px 2px #777
 
    position: fixed
    top: 0
@@ -68,12 +68,20 @@ header
             +flex(1)
             &:nth-child(3)
                +flex(1.7)
+
+               a
+                  // margin: 0px null 0px
+                  padding: 0px null 0px
+                  font-size: 1.0em
+                  +media($tablet)
+                     font-size: 0.8em
             a
                border-bottom: 12px $header-bg solid
                padding: 16px 0 10px
                +transition
                +flex(1)
                +display(flex)
+               height: 70px
                background: $header-bg
                +flex-direction(column)
                +justify-content(center)
@@ -83,8 +91,9 @@ header
                color: $header-color
                font:
                   size: 1.1em
-                  weight: 700
+                  weight: $bold
                +media($tablet)
                   font-size: 0.9em
+
                &:hover
                   @extend .nav-item-active

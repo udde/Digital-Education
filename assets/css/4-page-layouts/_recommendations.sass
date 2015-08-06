@@ -1,23 +1,17 @@
-$theme-link-color: fade-out($dark-text, 0.2)
-
-#themes-intro-section
-   background: darken($section-bg-3, 0)
+#recommendations-intro-section
+   background: darken($section-bg-4, 0)
    .wrapper
       section
          color: $light-text
          padding: 15px 40px 0px
          h1
             @extend .thin-heading
-            margin-left: -8px
+            margin-left: -4px
             margin-bottom: 4px
          +media($tablet)
             padding: 15px 20px 0px
-            h1
-               margin-left: -8px
 
-         // background: coral
-
-#themes-section
+#recommendations-section
    background: $white
    section
       padding: 10px 0
@@ -44,7 +38,7 @@ $theme-link-color: fade-out($dark-text, 0.2)
          box-shadow: 1px 0px 2px #999
          color: $dark-text
          margin: 10px 0 10px
-         min-height: 220px
+         min-height: 300px
          // display: block
          padding: 10px
          position: relative
@@ -73,20 +67,25 @@ $theme-link-color: fade-out($dark-text, 0.2)
                margin-top: 0px
                background:
                   size: cover
-
                   // image: url("http://www.fillmurray.com/700/700")
                   position: 50% 50%
          &:nth-child(2)
             .img-holder
                .img
-                  // background-image: url("http://www.fillmurray.com/400/400")
+                  background-image: url("http://www.fillmurray.com/400/400")
          &:nth-child(3)
             .img-holder
                .img
-                  // background-image: url("http://www.fillmurray.com/400/600")
+                  background-image: url("http://www.fillmurray.com/400/600")
          .info
             +shift(6)
             padding-left: 10px
+            hr
+               margin: 10px 0
+               &:nth-child(2)
+                  display: none
+                  margin: 5px 0
+
             h3
                color: $semi-dark-gray
                text-align: left
@@ -103,7 +102,7 @@ $theme-link-color: fade-out($dark-text, 0.2)
                padding-left: 2px
                margin-bottom: 50px
                word-wrap: break-word
-            a
+            a.media-box-button
                position: absolute
                bottom: 10px
                right: 10px
@@ -111,7 +110,7 @@ $theme-link-color: fade-out($dark-text, 0.2)
                color: $theme-link-color
                text-align: center
                font:
-                  size: 1.2em
+                  size: 1.0em
                   weight: $bold
                +transition(color 1.3s)
                &:hover

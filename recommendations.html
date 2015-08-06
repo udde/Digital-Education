@@ -1,0 +1,46 @@
+---
+layout: default
+title: Rekomenderade Digitala Läromedel
+---
+
+<div class="section-parent" id="recommendations-intro-section">
+   <div class="wrapper">
+      <section >
+         <h1>Exempel på en ny generation digitala läromedel</h1>
+         <p>
+            Det finns många läromedel tillgängliga idag och vi vill bla bla bla....
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis ullam nihil saepe maxime. Provident, reprehenderit mollitia delectus architecto praesentium cum, fugit eos assumenda illum magnam nobis. Fugiat, numquam, id.
+         </p>
+      </section>
+   </div>
+</div>
+<div class="section-parent" id="recommendations-section">
+   <div class="wrapper">
+      <section>
+         {% for t in site.recommendations %}
+         <div class="theme-media-object">
+            <div class="img-holder">
+               <!-- <div class="img"></div> -->
+               <!-- <div class="img" style='background-image: url("/assets/img/recommendations/critter.png")'></div> -->
+               <div class="img" style='background-image: url("/assets/img/recommendations/{{t.img}}")'></div>
+
+            </div>
+            <div class="info">
+               <h3> {{ t.title }} </h3>
+               <hr>
+               <!-- <a href="" class="category math"> Matematik </a> -->
+               <a {% if t.subject == 'Matematik' %} class="math-link category-link" {% elsif t.subject == 'Svenska' %} class="swe-link category-link" {% elsif t.subject == 'Engelska' %} class="eng-link category-link" {% endif %}  href="/{{t.subject}}"> {{t.subject}}</a>
+               <!-- <a class="category-link middle-link" href="">Mellanstadiet</a> -->
+               <a {% if t.years == 'Lågstadiet' %} class="junior-link category-link" {% elsif t.years == 'Mellanstadiet' %} class="middle-link category-link"  {% elsif t.years == 'Högstadiet' %} class="senior-link category-link" {% endif %}  href="/{{t.years}}"> {{t.years}}</a>
+               <hr>
+               <p class="theme-media-intro">
+                  {{ t.short }}
+               </p>
+               <a class="media-box-button" href="{{ t.url }}"><div>Läs mer om {{t.title}}</div></a>
+            </div>
+         </div>
+         {% endfor %}
+
+      </section>
+   </div>
+</div>

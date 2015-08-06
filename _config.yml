@@ -7,10 +7,14 @@ exclude: [node_modules, package.json, npm-debug.log, gulpfile.js]
 
 sass:
   sass_dir: assets/css
-  # style: compressed
+  style: compressed
 
 
 collections:
    themes:
        output: true
        permalink: /themes/:path/
+
+   recommendations:
+      output: true
+      permalink: /recommendations/:path/

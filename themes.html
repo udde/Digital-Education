@@ -7,7 +7,7 @@ layout: default
       <section >
          <h1>Teman</h1>
          <p>
-            Lär dig mer om vår forskning kring digitala läromedel här! Börja med <a href="">introduktionstemat</a>. Övriga kan ses i valfri ordning. 
+            Lär dig mer om vår forskning kring digitala läromedel här! Börja med <a href="">introduktionstemat</a>. Övriga kan ses i valfri ordning.
          </p>
       </section>
    </div>
@@ -19,7 +19,10 @@ layout: default
          {% for t in site.themes %}
          <div class="theme-media-object">
             <div class="img-holder">
-               <div class="img"></div>
+               <!-- <div class="img"></div> -->
+               <!-- <div class="img" style='background-image: url("/assets/img/recommendations/critter.png")'></div> -->
+               <div class="img" style='background-image: url("/assets/img/recommendations/critter.png")'></div>
+
             </div>
             <div class="info">
                <h3><span>Tema {{ forloop.index }} <br> </span> {{ t.title }} </h3>
@@ -31,8 +34,8 @@ layout: default
          </div>
          {% endfor %}
 
-         <div class="theme-media-object">
-            <div class="img-holder"><div class="img"></div></div>
+         <!-- <div class="theme-media-object">
+            <div class="img-holder"><div class="img" style='background-image: url("http://www.fillmurray.com/500/700")'></div></div>
             <div class="info">
                <h3><span>Tema 1 - </span>Introduktion</h3>
                <p class="theme-media-intro">
@@ -41,34 +44,9 @@ layout: default
                </p>
                <a href="#"><div>Gå till materialet</div></a>
             </div>
-         </div>
+         </div> -->
 
-         <div class="theme-media-object">
-            <div class="img-holder">
-               <div class="img"></div>
-            </div>
-            <div class="info">
-               <h3><span>Tema 2 - </span>Digitala läromedel idag</h3>
-               <p class="theme-media-intro">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo delectus odio eum okejsanådmammapappaasdasdasdasdasdasdasdasdas.
-               </p>
-               <a href="#"><div>Gå till materialet</div></a>
-            </div>
-         </div>
 
-         <div class="theme-media-object">
-            <div class="img-holder">
-               <div class="img"></div>
-            </div>
-            <div class="info"></div>
-         </div>
-
-         <div class="theme-media-object">
-            <div class="img-holder">
-               <div class="img"></div>
-            </div>
-            <div class="info"></div>
-         </div>
 
       </section>
    </div>

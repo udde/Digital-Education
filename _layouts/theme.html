@@ -5,9 +5,14 @@
 
 <body>
    {% include header.html %}
-
+   <script>
+      document.getElementById("navLink2").className += " nav-item-active";
+   </script>
    <div class="page-content">
       <div class="wrapper">
+         <p id="demo"></p>
+
+
          <div class="theme">
             <h1>
                {{ page.title}}
