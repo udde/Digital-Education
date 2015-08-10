@@ -1,72 +1,229 @@
-
+.footer-parent
+   position: relative
+.end
+   +size(100% 40px)
+   // border-top: 1px solid orange
+   background: red
+   text-align: center
+   // margin: auto
+   position: absolute
+   bottom: 0
 footer
    @media print
       display: none
    width: 100%
-   min-height: 300px
+   min-height: 10px
    background: $footer-bg
-   //text-align: center
    .footer-parent
-      // background: grey
-      @include direction-context(left-to-right)
-      @include span-columns(12)
-      min-height: 200px
       .footer-sections
-         // background: green
+         // background: teal
          min-height: 100px
+         padding-top: 30px
          // @include direction-context(left-to-right)
-         @include span-columns(7)
-         +shift(2.5)
+         @include span-columns(12)
+         +display(flex)
+         // +shift(0.5)
+         +media($tablet)
+            +span-columns(8)
+            +shift(0)
+            +display(flex)
+            padding-left: 10px
+            padding-right: 10px
          .footer-section
-            // background: orange
-            @include direction-context(left-to-right)
+            // background: coral
+            // @include direction-context(left-to-right)
             margin-left: 0px
-            @include span-columns(4)
-            +omega(3)
-            text-align: center
+            margin: 0 0 0 40px
+            // +span-columns(4)
+            // +omega(3)
             min-height: 100px
+            h3
+               @extend .thin-heading
+               font:
+                  size: 26px
+               color: fade-out($dark-text, 0.3)
+            +media($desktop)
+               +flex(3)
+               text-align: center
+               text-align: left
+               &:nth-child(1)
+                  text-align: left
+                  +flex(6)
+               &:nth-child(2)
+                  +flex(2)
+               &:nth-child(3)
+
+            +media($tablet)
+               margin: 0 15px
+               h3
+                  font-size: 22px
+               +flex(1)
+               &:nth-child(1)
+                  +flex(1.4)
+               &:nth-child(2)
+                  +flex(0.8)
+                  // padding-left: 20px
+                  // width: 100%
+                  // background: tomato
             .footer-section-header
                margin-top: 15px
                //margin-left: 10px
                //margin-right: 10px
             ul
                list-style: none
-               margin-top: 20px
+               margin-top: 10px
                margin-bottom: 10px
                li
                   color: black
-                  //margin-bottom: 10px
+                  margin-bottom: 8px
+                  a
+                     @extend .link
+                     font-weight: $bold
+                     color: fade-out($accent-color, 0.2)
+                     &:hover
+                        color: darken($accent-color, 10)
+                     +media($tablet)
+                        font-size: 14px
+                  input
+                     +media($tablet)
+                        width: calc(90% - 54px)
+                     width: calc(100% - 54px)
+                     margin-top: 6px
+                     height: 36px
+                     display: inline-block
+                     color: fade-out($dark-text, 0.2)
+                     border-width: 1px
+                     border-style: solid
+                     border-color: fade-out($dark-text, 0.5)
 
-            //.footer-section-headerfor
-               width: 100px
-               margin-top: 15px
-
+                  input:focus
+                     border-color: fade-out($dark-text, 0.3)
+                     box-shadow: none
+                     outline: none
+                  button
+                     display: inline-block
+                     +size(36px)
+                     position: relative
+                     top: -1px
+                     background: fade-out($accent-color, 0.2)
+                     i
+                        color: $footer-bg
+                        font-size: 24px
+                        position: absolute
+                        top: 5px
+                        left: 5px
+            // +media($tablet)
+               // // background: gold
+               // margin: 1px
+               // +span-columns(4)
+               // +omega(n)
+               // &:nth-child(1)
+               //    +span-columns(8)
+               //    // width: 100%
+               //    // background: coral
+               //    padding: 0px
+               //    position: relative
+               //    *
+               //       display: inline-block
+               //    h3
+               //       margin-left: 0px
+               //       // background: red
+               //       text-align: right
+               //       +span-columns(4)
+               //    ul
+               //       // background: teal
+               //       padding: 0px
+               //       +span-columns(4)
+               //       li
+               //          position: relative
+               //          left: -40px
+               //          // background: orange
+               //          width: 90%
+               //          input
+               //             width: calc(80%-56px)
    .footer-logos
-      //background: red
+      // background: red
       min-height: 100px
-      @include direction-context(left-to-right)
-      @include span-columns(7)
-      +shift(2.5)
+      margin-bottom: 20px
+      margin-top: 20px
+      padding-top: 20px
+      // padding-left: 40px
+      +span-columns(12)
+      +display(flex)
+      +flex-direction(row)
+      +justify-content(left)
 
       .footer-logo
-         //background: pink
-         @include direction-context(left-to-right)
-         @include span-columns(4)
-         margin-left: 0px
-         min-height: 100px
-         text-align: center
-         display: flex
-         align-items: center
-         justify-content: center
-         margin-top: 30px
-         margin-bottom: 30px
+         +flex(1)
+         margin: 0px 15px 0px
+         +media($tablet)
+            margin: 0px 10px 0px
+         // background: pink
 
-         .footer-logo-bildliu
-            max-height: 40px
+         &:nth-child(1)
+            +flex(14)
+            background:
+               size: contain
+               repeat: no-repeat
+               image: url("/assets/img/logos/etg.png")
+               position: 0% 15%
+         &:nth-child(2)
+            +flex(8)
+            // margin-left: 18px
+            background:
+               size: contain
+               repeat: no-repeat
+               image: url("/assets/img/logos/liu.png")
+               position: 0% 0%
+         &:nth-child(3)
+            +flex(12)
+            // margin-left: 8px
+            background:
+               size: contain
+               repeat: no-repeat
+               image: url("/assets/img/logos/lu2.png")
+               position: 0% 5%
+      // +media($tablet)
+      //    display: block
+      //    // background: orange
+      //    width: 94%
+      //    margin-left: 3%
+      //    padding-left: 0px
+      //    text-align: center
+      //    .footer-logo
+      //       display: inline-block
+      //       // background: green
+      //       +size(40%)
+      //       margin: 0 30px
+      //       height: 100px
+      //       &:nth-child(1)
+      //          width: 70%
+      //          margin-bottom: 20px
+      //       &:nth-child(2)
+      //          position: relative
+      //          top: -14px
+      //       &:nth-child(3)
+      //          width: 20%
+      //          height: 150px
 
-         .footer-logo-bildlu
-            max-height: 100px
 
+         // @include direction-context(left-to-right)
+         // @include span-columns(4)
+         // margin-left: 0px
+         // min-height: 100px
+         // text-align: center
+         // display: flex
+         // align-items: center
+         // justify-content: center
+         // margin-top: 30px
+         // margin-bottom: 30px
 
-         .footer-logo-bildetg
+         // .footer-logo-bildliu
+         //    max-height: 40px
+         //
+         // .footer-logo-bildlu
+         //    max-height: 100px
+         //
+         //
+         // .footer-logo-bildetg
             max-height: 35px

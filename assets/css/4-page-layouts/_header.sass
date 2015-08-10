@@ -1,15 +1,11 @@
-// .fixed
-//    position: fixed
-//    top: 0
-//    background: $header-bg
-
-// .fixed-header-margin
-//    margin-top: 57px
 .nav-item-active
    border-color: $nav-accent
    background: darken($header-bg, 3%)
    color: inherit
-   // color: lighten($header-color, 100%)
+.wrapper>nav>ul>li>a.nav-item-active
+   border-color: $nav-accent
+   background: darken($header-bg, 3%)
+   color: inherit
 
 .header-scrolled
    position: fixed
@@ -42,58 +38,63 @@ header
 
    .wrapper
       // padding: 5px 10px 10px
-   .logo
-      width: 30%
-      display: none
-      //inline-block
-      h1
-         font:
-            size: 36px
-         color: $light-text
+      .logo
+         width: 30%
+         display: inline-block
+         display: none
+         h1
+            font:
+               size: 36px
+            color: $dark-text
 
-   nav
-      +display(flex)
-      +flex-direction(column)
-      // height: 50px
-      ul
-         +flex(1)
-         // background: blue
-         list-style: none
+      nav
          +display(flex)
-         +flex-flow(row-wrap)
-         +justify-content(space-between)
-         // +flex-direction(row)
-
-         li
+         +flex-direction(column)
+         width: 100%
+         // height: 50px
+         ul
             +flex(1)
-            &:nth-child(3)
-               +flex(1.7)
+            // background: blue
+            list-style: none
+            +display(flex)
+            +flex-flow(row-wrap)
+            +justify-content(space-between)
+            // +flex-direction(row)
 
-               a
-                  // margin: 0px null 0px
-                  padding: 0px null 0px
-                  font-size: 1.0em
-                  +media($tablet)
-                     font-size: 0.8em
-            a
-               border-bottom: 12px $header-bg solid
-               padding: 16px 0 10px
-               +transition
+            li
                +flex(1)
-               +display(flex)
-               height: 70px
-               background: $header-bg
-               +flex-direction(column)
-               +justify-content(center)
-               text-align: center
-               // min-height: 62px
-               // min-height: $header-height
-               color: $header-color
-               font:
-                  size: 1.1em
-                  weight: $bold
-               +media($tablet)
-                  font-size: 0.9em
+               &:nth-child(3)
+                  +flex(1.9)
 
-               &:hover
-                  @extend .nav-item-active
+                  a
+                     line-height: 1.2
+                     // margin: 0px null 0px
+                     padding: 0px 1px 0px
+                     font-size: 1.0em
+                     +media($tablet)
+                        font-size: 0.8em
+               a
+
+                  border-bottom: 12px $header-bg solid
+                  padding: 16px 0 10px
+                  +transition
+                  +flex(1)
+                  +display(flex)
+                  height: $header-height
+                  background: $header-bg
+                  +flex-direction(column)
+                  +justify-content(center)
+                  text-align: center
+                  // min-height: 62px
+                  // min-height: $header-height
+                  color: $header-color
+                  font:
+                     size: 1.1em
+                     weight: $bold
+
+                  +media($tablet)
+                     font-size: 0.9em
+                     height: $tablet-header-height
+
+                  &:hover
+                     @extend .nav-item-active

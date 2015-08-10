@@ -7,24 +7,21 @@ $theme-link-color: fade-out($dark-text, 0.2)
          color: $light-text
          padding: 15px 40px 0px
          h1
-            @extend .thin-heading
             margin-left: -8px
             margin-bottom: 4px
          +media($tablet)
             padding: 15px 20px 0px
             h1
                margin-left: -8px
-
-         // background: coral
+         p
+            @extend .p-section
 
 #themes-section
    background: $white
    section
-      padding: 10px 0
+      padding: 10px 0 60px
       +span-columns(12)
-      // background: lightblue
       +media($desktop)
-         // padding: 10px
       .theme-media-object
          +media($desktop)
             +span-columns(6)
@@ -32,38 +29,19 @@ $theme-link-color: fade-out($dark-text, 0.2)
          +media($tablet)
             +span-columns(7)
             +shift(0.5)
-            // +omega(n)
-         // +outer-container
-         // +display(flex)
-         // @include align-items(center)
-         // @include flex-direction(row)
-         // @include flex-wrap(wrap)
-         // @include align-content(space-around)
-         // @include justify-content(space-between)
          background: $media-box-bg
          box-shadow: 1px 0px 2px #999
          color: $dark-text
          margin: 10px 0 10px
          min-height: 220px
-         // display: block
          padding: 10px
          position: relative
-         // h3.top-h3
-         //    font-size: 1.7em
-         //    text-align: center
-         //    margin-top: -10px
-         //    padding: 0px auto 10px
          div
-            // background: red
-            // display: inline-block
-            min-height: 200px
+            min-height: 280px
             +span-columns(6)
-            // @include flex-basis(20em)
-            // @include flex-grow(1)
          .img-holder
             +clearfix
             position: absolute
-            // +fill-parent
             +span-columns(6)
             height: calc(100% - 20px)
             background: $soft-gray
@@ -73,17 +51,8 @@ $theme-link-color: fade-out($dark-text, 0.2)
                margin-top: 0px
                background:
                   size: cover
-
                   // image: url("http://www.fillmurray.com/700/700")
                   position: 50% 50%
-         &:nth-child(2)
-            .img-holder
-               .img
-                  // background-image: url("http://www.fillmurray.com/400/400")
-         &:nth-child(3)
-            .img-holder
-               .img
-                  // background-image: url("http://www.fillmurray.com/400/600")
          .info
             +shift(6)
             padding-left: 10px
@@ -128,7 +97,3 @@ $theme-link-color: fade-out($dark-text, 0.2)
                      color: $theme-link-color
                      width: 4px
                      style: solid
-            // +size(100px)
-            // @include flex-basis(10px)
-            // @include flex(1)
-            // background: lightgreen

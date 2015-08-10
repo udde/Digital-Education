@@ -1,0 +1,66 @@
+.recommendation
+   @extend .theme
+   width: 60%
+   padding-bottom: 60px
+   +media($tablet)
+      width: 80%
+
+   .category-link
+      position: relative
+      top: -6px
+   h1
+      margin-right: 4px
+      display: inline-block
+   .content
+      +display(flex)
+      +flex-direction(column)
+      +justify-content()
+      div
+         min-height: 300px
+         +media($tablet)
+            min-height: 400px
+         // min-width: 50%
+         // +flex-grow(1)
+      .info
+         // background: fade-out(lightblue, 0.7)
+         padding: 10px
+         ul
+            list-style-type: circle
+            // list-style-position: inside
+            li
+               color: $accent-color
+               margin-bottom: 16px
+               margin-left: 20px
+               p
+                  color: $dark-text
+         .link-p
+            @extend .thick-heading
+            font-size: 16px
+            padding-top: 0px
+            margin: 0px 0px 10px
+      .img-holder
+         background: fade-out(coral, 0.7)
+         .img
+            // width: calc(100% - 20px)
+            width: 100%
+            margin: auto
+            background: fade-out(lightgreen, 0.7)
+            background:
+               size: cover
+               repeat: no-repeat
+               position: 50% 50%
+
+
+   img
+      display: inline-block
+   p
+      // text-align: left
+      // margin: 10px 0
+   h2
+      // margin: 20px 0 10px
+   h3
+      // font-style: italic
+   h4
+      // @extend .thick-heading
+      // font-size: 18px
+      // padding: 0

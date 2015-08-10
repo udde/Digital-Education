@@ -1,242 +1,194 @@
-@mixin red
-   background: red
-
-
+.overlay-olive
+   background: fade-out(olive, 0.86)
+   +size(100%)
+.round
+   border-radius: 50%
+   
 .section-parent
-   position: relative
-   // top: 10px
-
-   color: $light-text
-
-   background: $section-bg-1
-   &:nth-child(1)
-      background: $white
-      // margin-top: 62px
-   &:nth-child(2)
-      background: $medium-teal
-   &:nth-child(3)
-      background: $dark-teal
-   &:nth-child(4)
-      background: $white
-   //    color: $light-text
-   // &:nth-child(3n)
-   //    background: $section-bg-3
-   //    color: $light-text
-   // &:nth-child(2), &:nth-child(8)
-   //    background: $section-bg-4
-   // @include span-columns(3)
-
-
-      // +omega(2n)
-   // @include row()
    .wrapper
       section
-         // margin-bottom: 2px
-         // background: $medium-gray
-
-         // @include outer-container
-         .about-media
-            +span-columns(12)
-            // background: $water-blue
-
-            padding: 20px 30px
-            min-height: 400px
-
-            +display(flex)
-            +flex-direction(row)
-            +justify-content(space-between)
-            .img
-               background: $soft-gray
-               margin: auto 10px
-               +size(400px)
-            .info
-               // background: gold
-               margin: 10px
-               padding: 0 10px
-               +span-columns(6)
-               +display(flex)
-               +flex-direction(column)
-               +justify-content(space-between)
-               h3
-                  @extend .thin-heading
-               p
-                  font:
-                     size: 20px
-                     weight: 200
-                  margin: 15px 0
-               ul
-                  list-style: none
-               li
-                  font:
-                     size: 30px
-                     weight: 500
-                     // strong
-
-                  margin: 0 0 12px
-
-               a
-                  @extend .thick-heading
-                  line-height: $heading-line-height*1.7
-                  color: fade-out($light-text, 0.12)
-                  padding: 0px
-                  // -webkit-hyphens: auto
-                  // -moz-hyphens: auto
-                  // -ms-hyphens: auto
-                  // hyphens: auto
-                  word-wrap: break-word
-                  text-align: center
-                  font:
-                     size: 30px
-                     weight: 700
-                  div
-                     padding: 4px 8px 6px 15px
-
-                     border:
-                        color: fade-out($light-text, 0.15)
-                        width: 5px
-                        style: solid
-
-               // +size(500px 400px)
-               // @include span-columns(4)
-               // background: $dark-teal
-
-         +media($desktop)
-            +span-columns(12)
-            +shift(0)
-            +omega(n)
-
-         +media($tablet)
-            padding: 0px
-            .about-media
-               +justify-content(space-around)
-               &:nth-child(2n)
-                  +justify-content(flex-start)
-               padding: 30px 0px
-               .img
-                  +size(40vw)
-                  min-width: 280px
-                  min-height: 280px
-                  // margin-left: -30%
-               .info
-                  +span-columns(4)
-                  // padding: 0px
-
-         &#liu-section
-            .info
-               // color: lighten($dark-text,15%)
-               // color: darken($dark-teal,5%)
-               // color: $light-text
-               a
-                  // color: fade-out($dark-text, 0.14)
-                  div
-                     +transition(background .5s)
-                     // border-color: $dark-text
-                     // border-color: fade-out($dark-text, 0.25)
-                  &:hover
-                     color: $medium-teal
-                     div
-                        border-color: fade-out($light-text, 0)
-                        background: fade-out($light-text, 0)
-                     // color: darken($water-blue, 30)
-                     div
-                        // border-color: darken($water-blue, 30)
-                        // background: fade-out(lightblue,0.9)
-
-            .img
-               background:
-                  image: url("https://pbs.twimg.com/profile_images/801272120/liu_sigill_400x400.jpg")
-                  size: cover
-                  repeat: no-repeat
-                  position: 50% 50%
-
-         &#liu-section2
-            @extend #liu-section
-
-            //förslag - banta innehållet i textmängd på tabletversionen
-            .p-tablet
-               display: none
-            .p-desktop
-               display: inline-block
+         h1
+            @extend .thin-heading
             +media($tablet)
-               .p-tablet
-                  display: inline-block
-               .p-desktop
-                  display: none
+               // font-size: 40px
 
-            .info
-               h1
+.index
+   .section-parent
+      padding: 24px
+      +media($tablet)
+         padding: 15px 0px
+      position: relative
+      // top: 10px
+
+      color: $light-text
+
+      background: $section-bg-1
+      &:nth-child(1)
+         background: $white
+         // margin-top: 62px
+      &:nth-child(2)
+         background: $medium-teal
+      &:nth-child(3)
+         background: $dark-teal
+      &:nth-child(4)
+         background: $white
+
+      .wrapper
+         section
+            .content-box
+               +span-columns(12)
+               padding: 20px 30px
+               min-height: 400px
+               +display(flex)
+               +flex-direction(row)
+               +justify-content(space-between)
+               .img
+                  background: $soft-gray
+                  margin: auto 10px
+                  +size(420px)
+               .info
+                  //förslag - banta innehållet i textmängd på tabletversionen
+                  .p-tablet
+                     display: none
+                  .p-desktop
+                     display: inline-block
+                  +media($tablet)
+                     .p-tablet
+                        display: inline-block
+                     .p-desktop
+                        display: none
+
+                  margin: 10px
+                  padding: 0 10px
+                  +span-columns(6)
+                  +display(flex)
+                  +flex-direction(column)
+                  +justify-content(space-between)
+                  h3
+                     @extend .thin-heading
+                     +media($tablet)
+                        // font-size: 40px
+                  p
+                     @extend .p-section
+                     margin: 15px 0
+
+                  ul
+                     list-style: none
+                  li
+                     font:
+                        size: 30px
+                        weight: 500
+                     margin: 0 0 12px
+                  a
+                     @extend .thick-heading
+                     line-height: $heading-line-height*1.7
+                     color: fade-out($light-text, 0.12)
+                     padding: 0px
+                     word-wrap: break-word
+                     text-align: center
+                     font:
+                        size: 30px
+                        weight: 700
+                     +media($tablet)
+                        font-size: 20px
+                     div
+                        padding: 4px 8px 6px 15px
+                        &:hover
+                           border-color: fade-out($light-text, 0)
+                           background: fade-out($light-text, 0)
+                        border:
+                           color: fade-out($light-text, 0.15)
+                           width: 5px
+                           style: solid
+
+            +media($desktop)
+               +span-columns(12)
+               +shift(0)
+               +omega(n)
+
+            +media($tablet)
+               padding: 0px
+               .content-box
+                  +justify-content(space-around)
+                  &:nth-child(2n)
+                     +justify-content(flex-start)
+                  padding: 10px 0px 0px
+                  .img
+                     +size(40vw)
+                     min-width: 280px
+                     min-height: 280px
+                  .info
+                     +span-columns(4)
+
+            &#liu-section
+               .info
+                  a
+                     div
+                        +transition(background .5s)
+                     &:hover
+                        color: $medium-teal
+               .img
+                  background:
+                     image: url("https://pbs.twimg.com/profile_images/801272120/liu_sigill_400x400.jpg")
+                     size: cover
+                     repeat: no-repeat
+                     position: 50% 50%
+
+            &#liu-section2
+               @extend #liu-section
+
+               .info
+                  h1
+                     color: $dark-text
                   color: $dark-text
-               color: $dark-text
-               a
-                  +transition(color .3s)
-                  color: fade-out($dark-text, 0.14)
-                  div
-                     border-color: fade-out($dark-text, 0.24)
-                  &:hover
-                     color: $accent-color
+                  a
+                     +transition(color .3s)
+                     color: fade-out($dark-text, 0.14)
                      div
                         border-color: fade-out($dark-text, 0.24)
-                        background: $white
+                     &:hover
+                        color: $accent-color
+                        div
+                           border-color: fade-out($dark-text, 0.24)
+                           background: $white
 
-         // &#children-computer-section
-         //    position: relative
-         //    +fill-parent
-         //    // background: red
-         //    .info
-         //       position: absolute
-         //       width: 100%
-         //    .img
-         //       background-size: cover
-         //       background-position: 30%
-         //       background-repeat: no-repeat
-         //       // background-image: url("http://yourlivingcity.com/stockholm/wp-content/uploads/2011/11/granefelt-girls+with+a+computer+-916.jpg")
+            &#child-ipad-section
 
-         &#child-ipad-section
-
-            .info>a
-               div
-                  +transition(background .5s)
-               text-align: left
-               &:hover
-                  color: $dark-teal
+               .info>a
                   div
-                     border-color: fade-out($light-text, 0)
-                     background: fade-out($light-text, 0)
-            .img
-               background:
-                  image: url("http://macgenesis.net/wp-content/uploads/2011/10/ipad-in-school-2.jpg")
-                  size: cover
-                  repeat: no-repeat
-                  position: 50% 50%
-
-               box-shadow: -2px 1px 4px #333
+                     +transition(background .5s)
+                  text-align: left
+                  &:hover
+                     color: $dark-teal
+               .img
+                  box-shadow: -2px 1px 4px #333
+                  background:
+                     image: url("http://macgenesis.net/wp-content/uploads/2011/10/ipad-in-school-2.jpg")
+                     size: cover
+                     repeat: no-repeat
+                     position: 50% 50%
 #children-computer-parent
 
-   // background-color: $white
-
-   background-size: cover
-   background-position: 50%-50%
-   background-repeat: no-repeat
-   background-image: url("http://yourlivingcity.com/stockholm/wp-content/uploads/2011/11/granefelt-girls+with+a+computer+-916.jpg")
-   //z-index: -10
+   background:
+      size: cover
+      position: 50%-50%
+      repeat: no-repeat
+      image: url("http://yourlivingcity.com/stockholm/wp-content/uploads/2011/11/granefelt-girls+with+a+computer+-916.jpg")
    .wrapper
       #children-computer-section
          padding: 0px 0px 20px
          margin: 0px
          position: relative
          +display(flex)
-         //background: red
-         min-height: 560px
+         min-height: 530px
          height: 100%
          +justify-content(center)
          +align-items(flex-end)
-         .about-media
+         .content-box
             padding: 0px
             margin: 0px
-            //background: olive
             position: relative
             text-align: center
-            //+size(100%)
             width: 70%
             min-height: 200px
             .children-computer-overlay
@@ -246,16 +198,10 @@
                +fill-parent
                height: 100%
                background: rgba($dark-gray,0.4)
-               // background: red
             .info
                padding: 10px 40px 20px
                margin: 0px
                +fill-parent
-               // position: relative
-               // width: 500px
-               // min-height: 200px
-               // min-width: 800px
-               // padding: 100px
                z-index: 2
                color: $light-text
                a
@@ -267,7 +213,6 @@
                      z-index: 15
                      color: fade-out($light-text, 0)
                      div
-
                         z-index: 10
                         background: fade-out($dark-text, 0.2)
                         border-color: fade-out($light-text, 0.99)

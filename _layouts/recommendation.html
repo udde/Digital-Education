@@ -9,23 +9,33 @@
    document.getElementById("navLink3").className += " nav-item-active";
    </script>
    <div class="page-content">
-      <div class="section-parent" id="themes-intro-section">
-         <div class="wrapper">
-            <section>
-               <h1>
-                  {{ page.title }}
-               </h1>
-               <p>
+      <div class="wrapper">
+         <div class="recommendation">
+            <h1>
+               {{ page.title }}
+            </h1>
+            <a {% if page.subject == 'Matematik' %} class="math-link category-link" {% elsif page.subject == 'Svenska' %} class="swe-link category-link" {% elsif page.subject == 'Engelska' %} class="eng-link category-link" {% endif %}  href="/{{page.subject}}"> {{page.subject}}</a>
+            <a {% if page.years == 'Lågstadiet' %} class="junior-link category-link" {% elsif page.years == 'Mellanstadiet' %} class="middle-link category-link"  {% elsif page.years == 'Högstadiet' %} class="senior-link category-link" {% endif %}  href="/{{page.years}}"> {{page.years}}</a>
+            <hr>
+            <p>
+               <h4>
                   {{ page.short }}
-               </p>
-            </section>
-         </div>
-      </div>
-      <div class="section-parent">
-         <div class="wrapper">
-            <section>
-               {{ content }}
-            </section>
+               </h4>
+            </p>
+            <hr>
+            <div class="content">
+               <div class="img-holder">
+                  <div class="img" style="background-image: url('/assets/img/recommendations/{{page.img}}')"></div>
+               </div>
+               <hr>
+               <div class="info">
+                  {{ content }}
+                  <p class="link-p">Besök gärna <a href="{{ page.link }}"> {{page.title}}s hemsida </a></p>
+               </div>
+            </div>
+
+            <!-- <img class="" src="/assets/img/recommendations/{{page.img}}"/> -->
+            <!-- {{ content }} -->
          </div>
       </div>
    </div>

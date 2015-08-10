@@ -6,13 +6,10 @@
 <body>
    {% include header.html %}
    <script>
-      document.getElementById("navLink2").className += " nav-item-active";
+   document.getElementById("navLink2").className += " nav-item-active";
    </script>
    <div class="page-content">
       <div class="wrapper">
-         <p id="demo"></p>
-
-
          <div class="theme">
             <h1>
                {{ page.title}}
@@ -22,6 +19,9 @@
                {{ page.short }}
             </h4>
             <hr>
+            <div class="video-wrapper">
+               <iframe src='http://www.youtube.com/embed/{{page.youtube-id}}?showinfo=0&iv_load_policy=3&controls=0' frameborder="0"></iframe>
+            </div>
             {{ content }}
             <hr>
          </div>
