@@ -24,7 +24,7 @@ $(function(){
    //    }
    // });
 
-   setActiveNavItem();
+   // setActiveNavItem();
 
    //fixa bildtexter margin
    imgTextMargin();
