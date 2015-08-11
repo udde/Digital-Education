@@ -1,0 +1,77 @@
+
+.articles
+   .section-parent
+      position: relative
+      // top: 10px
+      color: $dark-text
+      background: $section-bg-0
+
+      //&:nth-child(1)
+         background: $soft-gray
+
+   #articles-intro-section
+      background: $medium-teal
+      .wrapper
+         section
+            color: $dark-text
+            padding: 15px 40px 0px
+            h1
+               @extend .thin-heading
+               margin-left: -4px
+               margin-bottom: 4px
+            +media($tablet)
+               padding: 15px 20px 0px
+
+   #articles-section
+      padding: 10px 0
+      +span-columns(12)
+      background: #fff
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .article
+         +span-columns(11)
+         min-height: (100px)
+         background: #ddd
+         margin: 10px
+         box-shadow: 1px 0px 2px #999
+
+
+
+
+         h3
+            color: $semi-dark-gray
+            text-align: left
+            padding-bottom: 2px
+            font-size: 20px
+            margin: 0 0 0px
+         hr
+            margin: 10px 0
+            &:nth-child(2)
+               display: black
+               margin: 5px 0
+
+         h4
+            font-weight: $bold
+            color: $medium-gray
+            padding-top: 0px
+            border-bottom: 4px solid $orange
+            display: inline-block
+            margin-right: 3px
+
+         a
+            font-size: 30px
+            color: black
+            float: right
+
+
+         .abstract
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            p
+               padding-left: 2px
+               margin-bottom: 20px
+               word-wrap: break-word
+               color: black
