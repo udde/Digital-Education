@@ -1,0 +1,237 @@
+@mixin red
+   background: red
+
+.about
+   .section-parent
+      position: relative
+      // top: 10px
+
+      color: $light-text
+
+      background: $section-bg-5
+      &:nth-child(1)
+         background: $dark-teal
+
+         // margin-top: 62px
+      &:nth-child(2)
+         background: $medium-teal
+      &:nth-child(3)
+         background: $white
+
+
+      .wrapper
+         section
+            .about-media
+               +span-columns(12)
+               padding: 20px 20px
+               min-height: 400px
+               +display(flex)
+               +flex-direction(row)
+               +justify-content(space-around)
+
+               .img
+                  background: none
+                  margin-bottom: 70px
+                  //margin-bottom:
+                  +size(500px)
+                  margin-left: 50px
+
+
+               .info
+
+                  margin: 10px
+                  padding: 0 10px
+                  +span-columns(8)
+                  +display(flex)
+                  +flex-direction(column)
+                  +justify-content(space-between)
+                  h3
+                     margin: 0px 0px -6px
+                     padding-bottom: 0px
+                     font:
+                        size: 50px
+                        weight: 200px
+                  p
+                     font:
+                        size: 25px
+                        weight: 200
+                     margin: 15px 0
+                  ul
+                     list-style: none
+                  li
+                     font:
+                        size: 20px
+                        weight: 100
+                     margin: 0 0 12px
+
+
+                  a
+                     @extend .thick-heading
+                     line-height: $heading-line-height*1.7
+                     color: fade-out($light-text, 0.12)
+                     padding: 0px
+                     word-wrap: break-word
+                     text-align: center
+                     font:
+                        size: 30px
+                        weight: 700
+                     div
+                        padding: 4px 8px 6px 15px
+
+                        border:
+                           color: fade-out($light-text, 0.15)
+                           width: 5px
+                           style: solid
+
+
+            +media($desktop)
+               +span-columns(12)
+               +shift(0)
+               +omega(n)
+
+            +media($tablet)
+               padding: 10px
+               .about-media
+                  +justify-content(space-around)
+                  &:nth-child(2n)
+                     +justify-content(flex-start)
+                  padding: 30px 0px
+                  .img
+                     +size(40vw)
+                  .info
+                     +span-columns(4)
+
+                     // padding: 0px
+
+            &#forskargruppen
+               .img
+                  display: none
+               .infoforsk
+                  color: $light-text
+                  text-align: left
+                  +span-columns (12)
+                  +flex-direction(row)
+                  strong
+                     font-weight: bold
+                     size: 30px
+                  h3
+                     margin: 0px 0px -6px
+                     padding-bottom: 0px
+                     font:
+                        size: 50px
+                        weight: 200px
+                  p
+                     font:
+                        size: 25px
+                        weight: 200
+                     margin: 15px 0
+                  ul
+                     list-style: none
+                  li
+                     font:
+                        size: 22px
+                        weight: 100
+                     margin: 0 0 12px
+
+                  a
+                     color: fade-out($light-text, 0.14)
+                     padding: 0px
+
+                     word-wrap: break-word
+                     text-align: center
+                     font:
+                        size: 30px
+                        weight: 700
+                     div
+                        +transition(background .5s)
+                        padding: 4px 8px 6px 15px
+                        border:
+                           color: fade-out($light-text, 0.15)
+                           width: 5px
+                           style: solid
+                           border-color: $light-text
+                           border-color: fade-out($dark-text, 0.25)
+                     &:hover
+                        color: $dark-teal
+                        div
+                           border-color: fade-out($light-text, 0)
+                           background: fade-out($light-text, 0)
+
+
+
+
+
+
+
+                     //background: $soft-gray
+                     //margin: auto 10px
+                     //+size(600px)
+
+
+            &#kontakta-oss
+               .info
+                  color: $dark-text
+                  text-align: left
+                  +span-columns(12)
+                  .content
+                     width: 40%
+                     display: inline-block
+               a
+                  //color: fade-out($dark-text, 0.14)
+                  div
+                     //border-color: $dark-text
+                     //border-color: fade-out($dark-text, 0.25)
+
+                     +transition(background .5s)
+                  &:hover
+                     color: $dark-teal
+                     div
+                        border-color: fade-out($light-text, 0)
+                        background: fade-out($light-text, 0)
+               .img
+                  display: inline-block
+
+                  background:
+                     opacity: 0
+                     image: url("http://www.lucs.lu.se/wp-content/uploads/2014/10/etg_group_2x6_141029.png")
+                     size: contain
+                     repeat: no-repeat
+                     position: 50% 50%
+
+
+            &#avslut
+               .info
+                  color: $dark-text
+                  text-align: left
+                  h3
+                     color: $dark-text
+
+                  .manifest
+                     ul
+                        list-style: none
+                        text-align: center
+                        li
+                           font:
+                              size: 20px
+                              weight: 100
+                           strong
+                              font-weight: bold
+                              size: 30px
+                              color: black
+                  a
+                     color: fade-out($dark-text, 0.14)
+                     div
+                        border-color: $dark-text
+                        border-color: fade-out($dark-text, 0.25)
+                     &:hover
+                        color: darken($water-blue, 30)
+                        div
+                           border-color: darken($water-blue, 30)
+                           // background: fade-out(lightblue,0.9)
+
+               .img
+                  background:
+                     image: url("/assets/img/etg.png")
+                     size: contain
+                     repeat: no-repeat
+                     position: 50% 50%
