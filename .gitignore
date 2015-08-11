@@ -8,6 +8,7 @@ Icon
 
 # builds
 _site
+_site/
 
 # Thumbnails
 ._*
