@@ -16,7 +16,17 @@
    height: 62px
    opacity: 0.0
    background: rgba(0,0,0,0)
+.header-back
+   position: fixed
+   top: 0
+   width: 100%
+   height: $header-height
+   +media($tablet)
+      height: $tablet-header-height
+   background: $header-bg
+   z-index: 10
 header
+
    @media print
       display: none
    *
@@ -34,7 +44,7 @@ header
 
    width: 100%
 
-   background: $header-bg
+   // background: $header-bg
 
    .wrapper
       // padding: 5px 10px 10px

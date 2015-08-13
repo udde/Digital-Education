@@ -13,10 +13,14 @@
          background: $white
          // margin-top: 62px
       &:nth-child(2)
-         background: $medium-teal
+         background: $white
       &:nth-child(3)
          background: $dark-teal
       &:nth-child(4)
+         background: $medium-teal
+      &:nth-child(5)
+         background: $dark-blue
+      &:nth-child(6)
          background: $white
 
       .wrapper
@@ -117,11 +121,19 @@
                      &:hover
                         color: $medium-teal
                .img
+                  @extend .round
                   background:
-                     image: url("https://pbs.twimg.com/profile_images/801272120/liu_sigill_400x400.jpg")
-                     size: cover
+                     color: fade-out($medium-teal, 0)
+                     color: white
+                     image: url("/assets/img/logos/liu.png")
+                     size: contain
                      repeat: no-repeat
                      position: 50% 50%
+                  div
+                     @extend .round
+                     background: fade-out($dark-teal, 0.7)
+                     +size(100%)
+
 
             &#liu-section2
                @extend #liu-section
@@ -141,9 +153,22 @@
                         div
                            border-color: fade-out($dark-text, 0.24)
                            background: $white
+               .img
+                  // border-radius: 0
+                  background:
+                     color: fade-out($medium-teal, 0)
+                     color: white
+                     image: url("/assets/img/logos/liu.png")
+                     size: contain
+                     repeat: no-repeat
+                     position: 50% 50%
+                  div
+                     @extend .round
+                     background: fade-out($dark-blue, 0.3)
+                     // display: none
+                     +size(100%)
 
             &#child-ipad-section
-
                .info>a
                   div
                      +transition(background .5s)
@@ -157,6 +182,73 @@
                      size: cover
                      repeat: no-repeat
                      position: 50% 50%
+
+            &#etg-section
+               .content-box
+                  padding: 8px
+                  +display(flex)
+                  +flex-direction(column)
+                  +align-items(center)
+                  .info
+                     // background: #ccc
+                     .content
+                        h1
+                           display: none
+                           color: $dark-text
+                     color: $dark-text
+                     ul
+
+                        // list-style-position: inside
+                        li
+
+                           margin-bottom: 16px
+                           margin-left: 20px
+                           p
+                              color: $dark-text
+                     .manifest
+                        text-align: left
+                        list-style-type: circle
+                        list-style-position: inside
+                        color: $accent-color
+                        li
+                           margin-bottom: 6px
+                           &:last-child
+                              margin-bottom: 36px
+                           p
+                              @extend .p-section
+                              color: $dark-text
+                              font-size: 0.9em
+                              margin: 0
+                              // font-weight: $bold
+                     a
+                        +transition(color .3s)
+                        color: fade-out($dark-text, 0.14)
+                        div
+                           border-color: fade-out($dark-text, 0.24)
+                        &:hover
+                           color: $accent-color
+                           div
+                              border-color: fade-out($dark-text, 0.24)
+                              background: $white
+                     display: block
+                     width: 100%
+                     text-align: center
+                     .content > p
+                        width: 80%
+                  .img
+                     display: block
+                     background: $white
+                     margin: auto 0px
+                     width: 100%
+                     height: 132px
+                     // box-shadow: -2px 1px 4px #333
+                     background:
+                        image: url("/assets/img/logos/etg.png")
+                        size: contain
+                        repeat: no-repeat
+                        position: 50% 50%
+
+
 #children-computer-parent
 
    background:
@@ -173,6 +265,7 @@
          min-height: 530px
          height: 100%
          +justify-content(center)
+         // flex-end knas i ie11??
          +align-items(flex-end)
          .content-box
             padding: 0px
