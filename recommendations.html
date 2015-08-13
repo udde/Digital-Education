@@ -28,8 +28,12 @@ title: Rekomenderade Digitala Läromedel
             <div class="info">
                <h3> {{ t.title }} </h3>
                <hr>
-               <!-- <a href="" class="category math"> Matematik </a> -->
-               <a {% if t.subject == 'Matematik' %} class="math-link category-link" {% elsif t.subject == 'Svenska' %} class="swe-link category-link" {% elsif t.subject == 'Engelska' %} class="eng-link category-link" {% endif %}  href="/{{t.subject}}"> {{t.subject}}</a>
+               {% for s in t.subject %}
+               {% for n in s %}
+               <a href="/{{n[1]}}" class="{{n[1]}}-link category-link"> {{n[0]}} </a>
+               {% endfor %}
+               {% endfor %}
+               <!-- <a {% if t.subject == 'Matematik' %} class="math-link category-link" {% elsif t.subject == 'Svenska' %} class="swe-link category-link" {% elsif t.subject == 'Engelska' %} class="eng-link category-link" {% endif %}  href="/{{t.subject}}"> {{t.subject}}</a> -->
                <!-- <a class="category-link middle-link" href="">Mellanstadiet</a> -->
                <a {% if t.years == 'Lågstadiet' %} class="junior-link category-link" {% elsif t.years == 'Mellanstadiet' %} class="middle-link category-link"  {% elsif t.years == 'Högstadiet' %} class="senior-link category-link" {% endif %}  href="/{{t.years}}"> {{t.years}}</a>
                <hr>

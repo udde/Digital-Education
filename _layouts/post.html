@@ -11,6 +11,11 @@
             <div class="post">
                <p class="date">{{page.date | date: '%b %d, %Y'}} </p>
                <h1>{{page.title}}</h1>
+               {% for t in page.tags %}
+               {% for d in t %}
+               <p>{{d[1]}}</p>
+               {% endfor %}
+               {% endfor %}
                <!-- <p>{{p.tags}}</p> -->
                <hr>
                {{content}}

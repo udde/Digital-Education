@@ -8,9 +8,11 @@ layout: recommendation
 #Titeln
 title: Critter Corral
 #Ämne, 'Matematik', 'Svenska', 'Engelska'
-subject: "Matematik"
+subject:
+   - Matematik: math
 #years = årskurser, använd 'Lågstadiet', 'Mellanstadiet', eller 'Högstadiet'
-years: 'Mellanstadiet'
+years:
+   - Mellanstadiet: middle
 #short = en ingress som inte ska vara för lång eller för kort. används i previews av materialet samt i materialet som just ingress
 short: 'Critter Corral är en iPad-app för tidig matematik, åldrarna 4-8.'
 #Bild från mappen assets/img/recommendations. använd rättnamn + filändelse. tex 'critter.png' eller 'garden1.jpg'
