@@ -12,8 +12,9 @@ years: 'Lågstadiet'
 short: 'Magiska Trädgården är ett lärspel för tidig matematik, åldrarna 4-6 (för lärplattor och datorer)'
 #Bild från mappen assets/img/recommendations. använd rättnamn + filändelse. tex 'critter.png' eller 'garden1.jpg'
 img: 'magical.png'
-#Direktlänk till webbplats för spelet
-link: 'magicalgarden.herokuapp.com/demo'
+#Direktlänk till webbplats respektive demo för spelet
+link: 'magicalgarden.herokuapp.com'
+demo: 'http://magicalgarden.herokuapp.com/demo'
 ---
 
 ####Kännetecken:

@@ -1,21 +1,9 @@
 $theme-link-color: fade-out($dark-text, 0.2)
 
 #themes-intro-section
+   @extend .intro-section
    background: darken($section-bg-3, 0)
-   .wrapper
-      section
-         color: $light-text
-         padding: 15px 40px 0px
-         h1
-            margin-left: -8px
-            margin-bottom: 4px
-         +media($tablet)
-            padding: 15px 20px 0px
-            h1
-               margin-left: -8px
-         p
-            @extend .p-section
-
+   
 #themes-section
    background: $white
    section

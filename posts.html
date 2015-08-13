@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="posts">
+
+   <div class="section-parent" id="posts-intro">
+      <div class="wrapper">
+         <section >
+            <h1>Nyheter</h1>
+            <p>
+               Här får du ta del av det senaste från oss. Letar du efter något särskilt - <a href="/archive">kika i arkivet</a>
+            </p>
+         </section>
+      </div>
+   </div>
+
+   <div class="wrapper">
+      {% for p in site.posts limit:4 %}
+      <div class="post">
+         <p class="date">{{p.date | date: '%b %d, %Y'}}</p>
+         <h1>{{p.title}}</h1>
+         <!-- <p>{{p.tags}}</p> -->
+         <hr>
+         {{p.content}}
+         <!-- <hr class="gray"> -->
+      </div>
+      {% endfor %}
+   </div>
+</div>

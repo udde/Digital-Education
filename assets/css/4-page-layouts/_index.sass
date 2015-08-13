@@ -1,17 +1,3 @@
-.overlay-olive
-   background: fade-out(olive, 0.86)
-   +size(100%)
-.round
-   border-radius: 50%
-   
-.section-parent
-   .wrapper
-      section
-         h1
-            @extend .thin-heading
-            +media($tablet)
-               // font-size: 40px
-
 .index
    .section-parent
       padding: 24px
@@ -35,6 +21,7 @@
 
       .wrapper
          section
+            // @extend .index-section
             .content-box
                +span-columns(12)
                padding: 20px 30px
@@ -64,6 +51,8 @@
                   +display(flex)
                   +flex-direction(column)
                   +justify-content(space-between)
+                  h1
+                     font-size: 3.5em
                   h3
                      @extend .thin-heading
                      +media($tablet)
@@ -138,8 +127,9 @@
                @extend #liu-section
 
                .info
-                  h1
-                     color: $dark-text
+                  .content
+                     h1
+                        color: $dark-text
                   color: $dark-text
                   a
                      +transition(color .3s)

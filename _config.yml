@@ -5,10 +5,12 @@ permalink: pretty
 # exclude: ['the_design.psd']
 exclude: [node_modules, package.json, npm-debug.log, gulpfile.js]
 
+paginate: 2
+paginate_path: "/posts/:num/"
+
 sass:
   sass_dir: assets/css
   style: compressed
-
 
 collections:
    themes:

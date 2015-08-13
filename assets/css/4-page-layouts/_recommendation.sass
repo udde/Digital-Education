@@ -1,7 +1,15 @@
 .recommendation
    @extend .theme
-   width: 60%
-   padding-bottom: 60px
+   width: 70%
+   // border-left: 1px solid $accent-color
+   // background: #eee
+   padding: 20px 0px 10px 10px
+   // margin-top: 90px
+   hr
+      position: relative
+      // left: -13px
+      // width: 100%
+      margin-bottom: 20px
    +media($tablet)
       width: 80%
 
@@ -9,6 +17,8 @@
       position: relative
       top: -6px
    h1
+      padding-top: 0px
+      margin-top: -10px
       margin-right: 4px
       display: inline-block
    .content
@@ -35,10 +45,17 @@
                   color: $dark-text
          .link-p
             @extend .thick-heading
+            display: block
+            a
+               color: $accent-color
             font-size: 16px
             padding-top: 0px
-            margin: 0px 0px 10px
+            margin: 20px 0px 10px
       .img-holder
+         // position: relative
+         // left: -10px
+         // width: 98%
+         // margin: auto
          background: fade-out(coral, 0.7)
          .img
             // width: calc(100% - 20px)

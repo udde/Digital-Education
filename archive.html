@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<script>
+document.getElementById("navLink5").className += " nav-item-active";
+</script>
+<div class="page-content">
+   <div class="section-parent" id="archive-section">
+      <div class="wrapper">
+         <section>
+            <h1>Arkivet</h1>
+            <p>Här hittar du alla nyheter vi publicerat i vår <a href="/posts">blog</a></p>
+         </section>
+      </div>
+   </div>
+
+   <div class="wrapper">
+      <div class="archive">
+
+
+         <ul>
+            {% for post in site.posts %}
+            {% if forloop.first %}
+            {% assign currY = post.date | date: '%Y' %}
+            <h3>{{ currY }}</h3>
+            <hr>
+            {% else %}
+            {% assign prevY = currY %}
+            {% assign currY = post.date | date: '%Y' %}
+            {% if currY != prevY %}
+            <h3>{{ currY }} </h3>
+            <hr>
+            {% endif %}
+            {% endif %}
+            <li>
+               <a href="{{ post.url }}"> <span class="date">{{ post.date | date: '%b %d, %Y'}} - </span>{{post.title}}</a>
+            </li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+</div>

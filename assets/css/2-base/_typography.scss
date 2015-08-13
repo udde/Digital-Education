@@ -28,6 +28,7 @@ h6 {
    color: $light-text;
    font-weight: $thin;
    font-size: 50px;
+   font-size: 3.1em;
    @media (max-width: $large-screen) {
       font-size: 40px;
    }
@@ -37,13 +38,14 @@ h6 {
    @extend h1;
    font-weight: $bold;
    font-size: 50px;
+   font-size: 2.2em;
    color: $dark-text;
    margin: 0px 0px 0px;
 }
 
 p {
    margin: 0 0 $small-spacing;
-   font-size: 16px;
+   font-size: 1em;
    // font-weight: 400;
 }
 .p-section{
@@ -55,22 +57,34 @@ p {
 }
 
 a,.link {
-
    color: $link-color;
    text-decoration: none;
    transition: color 0.1s linear;
-
    &:active,
    &:focus,
    &:hover {
       color: lighten($link-color, 10%);
    }
-
    &:active,
    &:focus {
       outline: none;
    }
 }
+.link-accent {
+   color: $accent-color;
+   text-decoration: none;
+   transition: color 0.1s linear;
+   &:active,
+   &:focus,
+   &:hover {
+      color: lighten($accent-color, 10%);
+   }
+   &:active,
+   &:focus {
+      outline: none;
+   }
+}
+
 a.category-link{
    font-weight: $bold;
    color: $medium-gray;

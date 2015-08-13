@@ -22,15 +22,16 @@
                   {{ page.short }}
                </h4>
             </p>
-            <hr>
+            <!-- <hr> -->
             <div class="content">
                <div class="img-holder">
                   <div class="img" style="background-image: url('/assets/img/recommendations/{{page.img}}')"></div>
                </div>
-               <hr>
+               <!-- <hr> -->
                <div class="info">
                   {{ content }}
-                  <p class="link-p">Besök gärna <a href="{{ page.link }}"> {{page.title}}s hemsida </a></p>
+                  {% if page.link != null %}<p class="link-p">Besök <a href="{{ page.link }}"> {{page.title}}s hemsida  </a></p> {% endif %}
+                  {% if page.demo != null %}<p class="link-p">Testa <a href="{{ page.demo }}"> {{page.title}}s Demo </a></p> {% endif %}
                </div>
             </div>
 

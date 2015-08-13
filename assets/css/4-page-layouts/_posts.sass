@@ -1,0 +1,42 @@
+#posts-intro
+   @extend .intro-section
+   background: #2C485B
+.posts
+   .wrapper
+      .post
+         width: 96%
+         margin-left: 0px
+.wrapper
+   .post
+      // margin-left: 0px
+      padding-left: 40px
+      +media($tablet)
+         padding-left: 19px
+      margin-bottom: 10px
+      width: 60%
+      text-align: left
+      p
+         font-size: 1.0em
+      ul, ol
+         list-style-position: inside
+      .date
+         color: $medium-gray
+         margin-bottom: 4px
+         padding-left: 3px
+         display: inline-block
+      .link-accent
+         position: relative
+         top: 40px
+      h1
+         @extend .thick-heading
+         margin-bottom: 10px
+      h3
+         margin-bottom: 6px
+      hr
+         height: 1px
+         border-width: 0px
+         color: $accent-color
+         background-color: $accent-color
+      .gray
+         color: $medium-gray
+         background-color: $medium-gray

@@ -1,0 +1,21 @@
+.section-parent
+   .wrapper
+      section
+         h1
+            @extend .thin-heading
+            color: $light-text
+
+.intro-section
+   background: darken($section-bg-4, 0)
+   .wrapper
+      section
+         color: $light-text
+         padding: 15px 40px 0px
+         h1
+            @extend .thin-heading
+            margin-left: -4px
+            margin-bottom: 4px
+         +media($tablet)
+            padding: 15px 20px 0px
+         p
+            @extend .p-section

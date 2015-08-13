@@ -1,16 +1,8 @@
+
+
 #recommendations-intro-section
+   @extend .intro-section
    background: darken($section-bg-4, 0)
-   .wrapper
-      section
-         color: $light-text
-         padding: 15px 40px 0px
-         h1
-            margin-left: -4px
-            margin-bottom: 4px
-         +media($tablet)
-            padding: 15px 20px 0px
-         p
-            @extend .p-section
 
 //GÖR OM denna och themes-section till en klass och en som extendar!
 #recommendations-section
@@ -23,17 +15,18 @@
          // padding: 10px
       .theme-media-object
          +media($desktop)
-            +span-columns(6)
-            +omega(2n)
+            +span-columns(4)
+            +omega(3n)
          +media($tablet)
-            +span-columns(7)
-            +shift(0.5)
+            +span-columns(4)
+            +omega(2n)
+            // +shift(0.5)
 
          background: $media-box-bg
          box-shadow: 1px 0px 2px #999
          color: $dark-text
          margin: 10px 0 10px
-         min-height: 300px
+         min-height: 200px
          padding: 10px
          position: relative
          div
@@ -51,6 +44,7 @@
                margin-top: 0px
                background:
                   size: cover
+                  repeat: no-repeat
                   // image: url("http://www.fillmurray.com/700/700")
                   position: 50% 50%
          &:nth-child(2)
@@ -83,7 +77,7 @@
                padding-top: 0px
             p
                padding-left: 2px
-               margin-bottom: 50px
+               margin-bottom: 70px
                word-wrap: break-word
             a.media-box-button
                position: absolute
