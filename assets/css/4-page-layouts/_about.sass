@@ -2,6 +2,7 @@
    background: red
 
 .about
+   @extend .intro-section
    .section-parent
       position: relative
       // top: 10px
@@ -14,7 +15,7 @@
 
          // margin-top: 62px
       &:nth-child(2)
-         background: $soft-gray
+         background: $white
 
       &:nth-child(3)
          background: $white
@@ -23,7 +24,7 @@
          section
             .about-media
                +span-columns(12)
-               padding: 20px 20px
+               padding: 0 20px
                min-height: 400px
                +display(flex)
                +flex-direction(row)
@@ -100,12 +101,14 @@
                .img
                   +span-columns(12)
                   background-color: red
+                  min-height: 450px
+
 
 
                   background:
                      image: url("/assets/img/etg_group_bild.png")
                      size: cover
-                     position: 40%-40%
+                     position: 100% 100%
                      repeat: no-repeat
 
                      //background: rgba($dark-gray,0.4)
@@ -119,6 +122,7 @@
             &#forskargruppen
                .img
                   display: none
+               padding-bottom: 20px
                .infoforsk
                   color: $dark-text
                   text-align: left
@@ -128,23 +132,21 @@
                      font-weight: bold
                      size: 30px
                   h3
-                     margin: 0px 0px -6px
-                     padding-bottom: 0px
-                     font:
-                        size: 50px
-                        weight: 200px
+                     @extend .thin-heading
+                     margin-left: -4px
+                     margin-bottom: 4px
+                     color: black
                   p
-                     font:
-                        size: 25px
-                        weight: 200
-                     margin: 15px 0
+                     @extend .p-section
                   ul
-                     list-style: none
+                     list-style-type: circle
+
                   li
                      font:
                         size: 22px
                         weight: 100
                      margin: 0 0 12px
+
 
                   a
                      color: fade-out($dark-text, 0.14)
@@ -178,7 +180,9 @@
                   color: $light-gray
                   text-align: left
                   h3
-                     color: $light-text
+                     @extend .thin-heading
+                     margin-left: -4px
+                     margin-bottom: 4px
                      text-align: center
 
                   .manifest
