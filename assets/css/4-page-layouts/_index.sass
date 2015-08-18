@@ -203,6 +203,7 @@
 
                            margin-bottom: 16px
                            margin-left: 20px
+                           font-size: 1.4em
                            p
                               color: $dark-text
                      .manifest
@@ -240,14 +241,22 @@
                      background: $white
                      margin: auto 0px
                      width: 100%
-                     height: 132px
+                     min-height: 138px
+                     height: 138px
+                     +media($tablet)
+                        min-height: 96px
+                        height: 96px
+
                      // box-shadow: -2px 1px 4px #333
                      background:
                         image: url("/assets/img/logos/etg.png")
                         size: contain
                         repeat: no-repeat
                         position: 50% 50%
-
+               +media($tablet)
+                  .content-box
+                     .img
+                        height: 60px
 
 #children-computer-parent
 

@@ -84,8 +84,14 @@ header
 
             li
                +flex(1)
+               &:nth-child(1)
+                  +flex(1)
+                  +media($tablet)
+                     +flex(0.9)
                &:nth-child(3)
                   +flex(1.4)
+                  +media($tablet)
+                     +flex(1.9)
                   a
                      // line-height: 1.2
                      // // margin: 0px null 0px
@@ -109,11 +115,11 @@ header
                   // min-height: $header-height
                   color: $header-color
                   font:
-                     size: 1.1em
+                     size: 1.0em
                      weight: $bold
 
                   +media($tablet)
-                     font-size: 0.9em
+                     font-size: 0.8em
                      height: $tablet-header-height
 
                   &:hover

@@ -14,11 +14,26 @@ title: Rekomenderade Digitala Läromedel
       </section>
    </div>
 </div>
+<div class="section-parent" id="filter-parent">
+   <div class="wrapper">
+      <section class="invisible">
+         <div class="filter">
+            <ul>
+               <!-- <li><a class="category-link math-link">Matematik<i class="fa fa-times"></i></a></li>
+               <li><a class="category-link middle-link">Mellanstadiet<i class="fa fa-times"></i></a></li>
+               <li><a class="category-link swe-link">Svenska<i class="fa fa-times"></i></a></li> -->
+            </ul>
+         </div>
+      </section>
+   </div>
+</div>
+
 <div class="section-parent" id="recommendations-section">
    <div class="wrapper">
-      <section>
+      <section id="rec-sec">
          {% for t in site.recommendations %}
-         <div class="theme-media-object" data-categorys="{}">
+
+         <div class="recommendation-media-object">
             <div class="img-holder">
                <!-- <div class="img"></div> -->
                <!-- <div class="img" style='background-image: url("/assets/img/recommendations/critter.png")'></div> -->
@@ -26,16 +41,24 @@ title: Rekomenderade Digitala Läromedel
 
             </div>
             <div class="info">
-               <h3> {{ t.title }} </h3>
+               <a href="{{ t.url }}">
+                  <h3> {{ t.title }} </h3>
+               </a>
                <hr>
-               {% for s in t.subject %}
+               {% for s in t.categories %}
                {% for n in s %}
-               <a href="/{{n[1]}}" class="{{n[1]}}-link category-link"> {{n[0]}} </a>
+               <a class="{{n[0]}}-link category-link" data-categories="{{n[0]}}"> {{n[1]}} </a>
+               {% endfor %}
+               {% endfor %}
+
+               {% for y in t.years %}
+               {% for m in y %}
+               <!-- <a href="/{{m[1]}}" class="{{m[1]}}-link category-link"> {{m[0]}} </a> -->
                {% endfor %}
                {% endfor %}
                <!-- <a {% if t.subject == 'Matematik' %} class="math-link category-link" {% elsif t.subject == 'Svenska' %} class="swe-link category-link" {% elsif t.subject == 'Engelska' %} class="eng-link category-link" {% endif %}  href="/{{t.subject}}"> {{t.subject}}</a> -->
                <!-- <a class="category-link middle-link" href="">Mellanstadiet</a> -->
-               <a {% if t.years == 'Lågstadiet' %} class="junior-link category-link" {% elsif t.years == 'Mellanstadiet' %} class="middle-link category-link"  {% elsif t.years == 'Högstadiet' %} class="senior-link category-link" {% endif %}  href="/{{t.years}}"> {{t.years}}</a>
+               <!-- <a {% if t.years == 'Lågstadiet' %} class="junior-link category-link" {% elsif t.years == 'Mellanstadiet' %} class="middle-link category-link"  {% elsif t.years == 'Högstadiet' %} class="senior-link category-link" {% endif %}  href="/{{t.years}}"> {{t.years}}</a> -->
                <hr>
                <p class="theme-media-intro">
                   {{ t.short }}
