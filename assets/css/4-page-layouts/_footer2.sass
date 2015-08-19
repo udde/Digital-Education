@@ -21,11 +21,21 @@ footer
       margin: 10px auto
       display: inline-block
       color: $accent-color
+      font-size: 1.2em
+      +media($tablet)
+         font-size: 0.9em
+      font-weight: 400
       a
          color: $accent-color
       position: relative
       // bottom: 60px
+      .footer-span
+         margin: 0px 6px
    hr
-      width: 400px
+      width: 60%
       margin-bottom: 40px
       margin-top: 20px
+      +media($tablet)
+         width: 80%
+         margin-top: 12px
+         margin-bottom: 20px
