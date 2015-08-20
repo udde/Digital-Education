@@ -8,12 +8,14 @@ $theme-link-color: fade-out($dark-text, 0.2)
    background: $white
    section
       padding: 10px 0 60px
+      min-height: 70vh
       +span-columns(12)
+      +shift(0)
       +media($desktop)
       .theme-media-object
          +media($desktop)
-            +span-columns(6)
-            +omega(2n)
+            +span-columns(4)
+            +omega(3n)
          +media($tablet)
             +span-columns(7)
             +shift(0.5)
@@ -21,11 +23,11 @@ $theme-link-color: fade-out($dark-text, 0.2)
          box-shadow: 1px 0px 2px #999
          color: $dark-text
          margin: 10px 0 10px
-         min-height: 220px
+         // min-height: 220px
          padding: 10px
          position: relative
          div
-            min-height: 280px
+            min-height: 200px
             +span-columns(6)
          .img-holder
             +clearfix
@@ -58,9 +60,11 @@ $theme-link-color: fade-out($dark-text, 0.2)
                padding-top: 0px
             p
                padding-left: 2px
-               margin-bottom: 50px
+               // margin-bottom: 50px
                word-wrap: break-word
             a
+
+               display: none
                position: absolute
                bottom: 10px
                right: 10px

@@ -2,7 +2,33 @@
 
 #recommendations-intro-section
    @extend .intro-section
+// <<<<<<< HEAD
+   // background: $medium-teal
+#filter-parent
+   background: #eee
+   .wrapper
+      section
+         .filter
+            padding: 6px 38px
+            // background: coral
+            +span-columns(12)
+            ul
+               list-style: none
+               li
+                  display: inline-block
+                  margin-right: 10px
+                  a
+                     font-size: 1.4em
+                     margin-right: 6px
+                  i
+                     margin-left: 6px
+                     font-size: 0.9em
+                     color: $accent-color
+                     position: relative
+                     top: 1px
+// =======
    background: darken($section-bg-3, 0)
+// >>>>>>> 3bf90cc9b1fad01a79c6bf8e8cd133e769afbe0f
 
 //GÖR OM denna och themes-section till en klass och en som extendar!
 #recommendations-section
@@ -13,14 +39,14 @@
       // background: lightblue
       +media($desktop)
          // padding: 10px
-      .theme-media-object
+      .recommendation-media-object
          +media($desktop)
             +span-columns(6)
             +omega(2n)
          +media($tablet)
-            +span-columns(4)
+            +span-columns(7)
             +omega(n)
-            // +shift(0.5)
+            +shift(0.5)
 
          background: $media-box-bg
          box-shadow: 1px 0px 2px #999
@@ -64,17 +90,13 @@
                   display: none
                   margin: 5px 0
             h3
-               color: $semi-dark-gray
-               text-align: left
-               padding-bottom: 2px
-               font-size: 20px
-               margin: 0 0 0px
+               @extend .thick-heading
+               font-size: 1.4em
                span
                   color: lighten($dark-text, 10)
                   font:
                      size: 18px
                      weight: $thin
-               padding-top: 0px
             p
                padding-left: 2px
                margin-bottom: 70px

@@ -20,3 +20,7 @@ collections:
    recommendations:
       output: true
       permalink: /recommendations/:path/
+
+   articles:
+      output: true
+      permalink: /articles/:path/

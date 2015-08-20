@@ -1,0 +1,41 @@
+footer
+   background: fade-out(darken($medium-teal,30),0.8)
+   background: $footer-bg
+   // .footer-logos
+   //    min-height: 80px
+   //    margin-bottom: 30px
+   //    +media($tablet)
+   //       min-height: 60px
+   //       margin-bottom: 0px
+   .wrapper
+      min-height: 100px
+      // background: fade-out(coral,0.97)
+      text-align: center
+      position: relative
+   .footer2-logo
+
+      +size(120px)
+      background: lightblue
+      display: none
+   .footer-copy
+      margin: 10px auto
+      display: inline-block
+      color: $accent-color
+      font-size: 1.2em
+      +media($tablet)
+         font-size: 0.9em
+      font-weight: 400
+      a
+         color: $accent-color
+      position: relative
+      // bottom: 60px
+      .footer-span
+         margin: 0px 6px
+   hr
+      width: 60%
+      margin-bottom: 40px
+      margin-top: 20px
+      +media($tablet)
+         width: 80%
+         margin-top: 12px
+         margin-bottom: 20px

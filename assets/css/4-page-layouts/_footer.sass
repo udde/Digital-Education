@@ -142,11 +142,13 @@ footer
                //          input
                //             width: calc(80%-56px)
    .footer-logos
-      // background: red
-      min-height: 100px
-      margin-bottom: 20px
+      // background: tomato
+      min-height: 80px
+      +media($tablet)
+         min-height: 40px
+      margin-bottom: 0px
       margin-top: 20px
-      padding-top: 20px
+      // padding-top: 20px
       // padding-left: 40px
       +span-columns(12)
       +display(flex)
@@ -157,7 +159,7 @@ footer
          +flex(1)
          margin: 0px 15px 0px
          +media($tablet)
-            margin: 0px 10px 0px
+            margin: 0px 8px 0px
          // background: pink
 
          &:nth-child(1)
@@ -166,7 +168,7 @@ footer
                size: contain
                repeat: no-repeat
                image: url("/assets/img/logos/etg.png")
-               position: 0% 15%
+               position: 50% 15%
          &:nth-child(2)
             +flex(8)
             // margin-left: 18px

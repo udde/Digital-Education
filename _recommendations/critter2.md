@@ -4,6 +4,9 @@ title: 'Critter Corral 2'
 subject: 'Svenska'
 #kommentar???
 years: 'Lågstadiet'
+categories:
+   - swe: Svenska
+   - junior: Lågstadiet
 short: 'Ett mattespel där man hjälper nånting nånting bla bla.'
 img: 'chess.jpg'
 round: 'round'

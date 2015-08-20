@@ -7,9 +7,12 @@
 layout: recommendation
 #Titeln
 title: Critter Corral
-#Ämne, 'Matematik', 'Svenska', 'Engelska'
-subject:
-   - Matematik: math
+
+#Kategorierna som du kan "tagga" lärmedlet med
+categories:
+   - math: Matematik
+   - middle: Mellanstadiet
+   - junior: Lågstadiet
 #years = årskurser, använd 'Lågstadiet', 'Mellanstadiet', eller 'Högstadiet'
 years:
    - Mellanstadiet: middle
