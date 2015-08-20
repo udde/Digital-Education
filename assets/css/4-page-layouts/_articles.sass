@@ -14,6 +14,7 @@
       //&:nth-child(1)
          background: $soft-gray
 
+
       // .wrapper
       //    section
       //       color: $dark-text
@@ -25,8 +26,24 @@
       //       +media($tablet)
       //          padding: 15px 20px 0px
 
+   #articles-intro-section
+      @extend .intro-section
+      background: $section-bg-3
+      .wrapper
+         section
+            color: $light-text
+            padding: 15px 40px 0px
+            h1
+               // @extend .thin-heading
+               margin-left: -4px
+               margin-bottom: 4px
+            +media($tablet)
+               padding: 15px 20px 0px
+
+
    #articles-section
       padding: 10px 30px
+      min-height: 70vh
       +media($tablet)
          padding: 10px
       // background: #aaa

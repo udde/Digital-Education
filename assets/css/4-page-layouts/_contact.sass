@@ -1,45 +1,55 @@
-
 .contact
-   .section-parent
-      position: relative
-      // top: 10px
-      color: $light-text
-      background: $section-bg-0
-
-
    #contact-intro-section
-      background: $dark-teal
+      @extend .intro-section
+      background: darken($section-bg-5, 0)
       .wrapper
          section
             color: $light-text
             padding: 20px 40px 0px
-            p
-               font:
-                  size: 20px
-                  weight: 100
             h1
-               @extend .thin-heading
-               margin-left: -4px
-               margin-bottom: 4px
+               // margin-bottom: 10px
+            p
+               width: 90%
+               @extend .p-section
+               margin-bottom: 8px
+               .contact-email
+                  color: $link-color
 
             ul
-               list-style: none
+               list-style: circle
                text-align: left
+               list-style-position: inside
+               margin: 0
+               padding: 0
                li
+                  @extend .p-section
                   font:
-                     size: 25px
-                     weight: 100
+                     // size: 23px
+                     // weight: 100
                   strong
                      font-weight: bold
 
             +media($tablet)
                padding: 15px 20px 0px
+   .contact-big-img
+      background: $medium-teal
+      background:
+         image: url("http://7-themes.com/data_images/out/8/6793648-free-peaceful-wallpaper.jpg")
+         size: cover
+         position: 0% 55%
+      width: 100%
+      height: 30vh
+      .overlay
+         background: fade-out($medium-teal, 0.4)
+         +size(100%)
+         // height: 20vh
 
    #contact-section
       padding: 10px 0
       +span-columns(12)
       background: #fff
       display: flex
+      display: none
       flex-direction: column
       align-items: center
 
@@ -57,6 +67,7 @@
             font-size: 25px
             margin: 0 0 0px
             margin-bottom: 10px
+            margin-left: 10px
          hr
             margin: 10px 0
             &:nth-child(2)
@@ -71,18 +82,20 @@
             border-bottom: 4px solid $orange
             display: inline-block
             margin-right: 3px
+            margin-left: 10px
 
          a
             font-size: 30px
             color: black
-            float: right
+            float: left
 
          input
+
             +media($tablet)
                width: calc(90% - 54px)
             width: calc(100% - 54px)
             margin-top: 6px
-            height: 36px
+            height: 46px
             display: inline-block
             color: fade-out($dark-text, 0.2)
             border-width: 1px
@@ -93,6 +106,21 @@
             border-color: fade-out($dark-text, 0.3)
             box-shadow: none
             outline: none
+
+         #namn
+            width: 50%
+            display: flex
+            flex-direction: column
+
+         #adress
+            width: 50%
+            display: flex
+            flex-direction: column
+
+         #epost
+            width: 50%
+            display: flex
+            flex-direction: column
 
          p
             font:
