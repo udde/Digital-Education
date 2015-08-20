@@ -1,25 +1,15 @@
-@mixin red
-   background: red
-
 .about
-   @extend .intro-section
    .section-parent
+      @extend .intro-section
       position: relative
-      // top: 10px
-
       color: $light-text
-
       background: $section-bg-0
       &:nth-child(1)
-         background: $medium-teal
-
-         // margin-top: 62px
+         background: $dark-teal
       &:nth-child(2)
          background: $white
-
       &:nth-child(3)
          background: $white
-
       .wrapper
          section
             .about-media
@@ -29,9 +19,7 @@
                +display(flex)
                +flex-direction(row)
                +justify-content(space-around)
-
                .info
-
                   margin: 10px
                   padding: 0 10px
                   +span-columns(10)
@@ -56,8 +44,6 @@
                         size: 20px
                         weight: 100
                      margin: 0 0 12px
-
-
                   a
                      @extend .thick-heading
                      line-height: $heading-line-height*1.7
@@ -70,18 +56,14 @@
                         weight: 700
                      div
                         padding: 4px 8px 6px 15px
-
                         border:
                            color: fade-out($dark-text, 0.15)
                            width: 5px
                            style: solid
-
-
             +media($desktop)
                +span-columns(12)
                +shift(0)
                +omega(n)
-
             +media($tablet)
                padding: 10px
                .about-media
@@ -93,32 +75,15 @@
                      +size(40vw)
                   .info
                      +span-columns(4)
-
-                     // padding: 0px
-
-
             &#bild
                .img
                   +span-columns(12)
-                  // background-color: red
                   min-height: 450px
-
-
-
                   background:
                      image: url("/assets/img/etg_group_bild.png")
                      size: cover
                      position: 100% 100%
                      repeat: no-repeat
-
-                     //background: rgba($dark-gray,0.4)
-                     //margin-bottom: 70px
-                     //+fill-parent
-                     //position: absolute
-                     //height: 100%
-                     //z-index: 0
-
-
             &#forskargruppen
                .img
                   display: none
@@ -173,28 +138,28 @@
                            background: fade-out($light-text, 0)
 
 
-            &#avslut
-               .img
-                  display: none
-               .info
-                  color: $light-gray
-                  text-align: left
-                  h3
-                     @extend .thin-heading
-                     margin-left: -4px
-                     margin-bottom: 4px
-                     text-align: center
-
-                  .manifest
-                     ul
-                        list-style: none
-                        text-align: center
-                        margin-top: 20px
-                        li
-                           font:
-                              size: 30px
-                              weight: 200
-                           strong
-                              font-weight: bold
-                              size: 30px
-                              color: dark-gray
+            // &#avslut
+            //    .img
+            //       display: none
+            //    .info
+            //       color: $light-gray
+            //       text-align: left
+            //       h3
+            //          @extend .thin-heading
+            //          margin-left: -4px
+            //          margin-bottom: 4px
+            //          text-align: center
+            //
+            //       .manifest
+            //          ul
+            //             list-style: none
+            //             text-align: center
+            //             margin-top: 20px
+            //             li
+            //                font:
+            //                   size: 30px
+            //                   weight: 200
+            //                strong
+            //                   font-weight: bold
+            //                   size: 30px
+            //                   color: dark-gray

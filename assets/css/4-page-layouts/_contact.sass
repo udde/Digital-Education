@@ -1,7 +1,15 @@
+#contact-anchor
+   display: block
+   position: relative
+   top: -$header-height
+   +media($tablet)
+      top: -$tablet-header-height 
+   visibility: hidden
 .contact
    #contact-intro-section
       @extend .intro-section
       background: darken($section-bg-5, 0)
+      padding: 0 0 20px
       .wrapper
          section
             color: $light-text
@@ -32,14 +40,15 @@
             +media($tablet)
                padding: 15px 20px 0px
    .contact-big-img
-      background: $medium-teal
+      background: $white
       background:
-         image: url("http://7-themes.com/data_images/out/8/6793648-free-peaceful-wallpaper.jpg")
+         // image: url("http://7-themes.com/data_images/out/8/6793648-free-peaceful-wallpaper.jpg")
          size: cover
          position: 0% 55%
       width: 100%
       height: 30vh
       .overlay
+         display: none
          background: fade-out($medium-teal, 0.4)
          +size(100%)
          // height: 20vh
