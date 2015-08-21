@@ -1,141 +1,156 @@
 .about
+   .wrapper
+      padding: 0px
+      margin-bottom: -6px
+      .contact-img
+         width: 100%
+         margin: 30px 0 0 0
+         // background: red
+
    .section-parent
       @extend .intro-section
       position: relative
       color: $light-text
       background: $section-bg-0
       &:nth-child(1)
-         background: $dark-teal
+         background: $section-bg-3
       &:nth-child(2)
-         background: $white
+         background: $section-bg-5
+         display: none
       &:nth-child(3)
-         background: $white
+         background: $section-bg-0
       .wrapper
          section
-            .about-media
-               +span-columns(12)
-               padding: 0 20px
-               min-height: 400px
-               +display(flex)
-               +flex-direction(row)
-               +justify-content(space-around)
-               .info
-                  margin: 10px
-                  padding: 0 10px
-                  +span-columns(10)
-                  +display(flex)
-                  +flex-direction(column)
-                  +justify-content(space-between)
-                  h3
-                     margin: 0px 0px -6px
-                     padding-bottom: 0px
-                     font:
-                        size: 50px
-                        weight: 200px
+            // +media($tablet)
+               // padding: 20px
+            p
+               @extend .p-section
+               
+            .manifest
+               @extend .std-ul
+               margin: 6px 0px 14px
+               color: $light-text
+
+         #forskargruppen
+            // background: coral
+            padding-bottom: 10px
+            color: $dark-text
+            text-align: left
+            h1
+               color: $dark-text
+               padding-left: 2px
+               margin: 18px 0 12px
+            p
+               @extend .p-section
+               a
+                  @extend .link-accent
+            ul
+               @extend .std-ul
+               li
+                  color: $accent-color
+                  &:last-child
+                     margin-bottom: 16px
                   p
-                     font:
-                        size: 25px
-                        weight: 200
-                     margin: 15px 0
-                  ul
-                     list-style: none
-                  li
-                     font:
-                        size: 20px
-                        weight: 100
-                     margin: 0 0 12px
-                  a
-                     @extend .thick-heading
-                     line-height: $heading-line-height*1.7
-                     color: fade-out($dark-text, 0.12)
-                     padding: 0px
-                     word-wrap: break-word
-                     text-align: center
-                     font:
-                        size: 30px
-                        weight: 700
-                     div
-                        padding: 4px 8px 6px 15px
-                        border:
-                           color: fade-out($dark-text, 0.15)
-                           width: 5px
-                           style: solid
-            +media($desktop)
-               +span-columns(12)
-               +shift(0)
-               +omega(n)
-            +media($tablet)
-               padding: 10px
-               .about-media
-                  +justify-content(space-around)
-                  &:nth-child(2n)
-                     +justify-content(flex-start)
-                  padding: 30px 0px
-                  .img
-                     +size(40vw)
-                  .info
-                     +span-columns(4)
-            &#bild
-               .img
-                  +span-columns(12)
-                  min-height: 450px
-                  background:
-                     image: url("/assets/img/etg_group_bild.png")
-                     size: cover
-                     position: 100% 100%
-                     repeat: no-repeat
-            &#forskargruppen
-               .img
-                  display: none
-               padding-bottom: 20px
-               .infoforsk
-                  color: $dark-text
-                  text-align: left
-                  +span-columns (12)
-                  +flex-direction(row)
-                  strong
-                     font-weight: bold
-                     size: 30px
-                  h3
-                     @extend .thin-heading
-                     margin-left: -4px
-                     margin-bottom: 4px
-                     color: black
-                  p
-                     @extend .p-section
-                  ul
-                     list-style-type: circle
-
-                  li
-                     font:
-                        size: 22px
-                        weight: 100
-                     margin: 0 0 12px
+                     color: $dark-text
 
 
-                  a
-                     color: fade-out($dark-text, 0.14)
-                     padding: 0px
+            // a
+               // color: fade-out($dark-text, 0.14)
+               // padding: 0px
+               // word-wrap: break-word
+               // text-align: center
+               // font:
+               //    size: 30px
+               //    weight: 700
+               // div
+               //    +transition(background .5s)
+               //    padding: 4px 8px 6px 15px
+               //    border:
+               //       color: fade-out($dark-text, 0.15)
+               //       width: 5px
+               //       style: solid
+               //       border-color: $dark-text
+               //       border-color: fade-out($dark-text, 0.25)
+               // &:hover
+               //    color: $orange
+               //    div
+               //       border-color: fade-out($dark-text, 0)
+               //       background: fade-out($light-text, 0)
 
-                     word-wrap: break-word
-                     text-align: center
-                     font:
-                        size: 30px
-                        weight: 700
-                     div
-                        +transition(background .5s)
-                        padding: 4px 8px 6px 15px
-                        border:
-                           color: fade-out($dark-text, 0.15)
-                           width: 5px
-                           style: solid
-                           border-color: $dark-text
-                           border-color: fade-out($dark-text, 0.25)
-                     &:hover
-                        color: $orange
-                        div
-                           border-color: fade-out($dark-text, 0)
-                           background: fade-out($light-text, 0)
+
+            // +media($desktop)
+            //    +span-columns(12)
+            //    +shift(0)
+            //    +omega(n)
+               // .about-media
+               //    +justify-content(space-around)
+               //    &:nth-child(2n)
+               //       +justify-content(flex-start)
+               //    padding: 30px 0px
+               //    .img
+               //       +size(40vw)
+               //    .info
+               //       +span-columns(4)
+
+
+            // .about-media
+            //    +span-columns(12)
+            //    padding: 0 20px
+            //    min-height: 400px
+            //    +display(flex)
+            //    +flex-direction(row)
+            //    +justify-content(space-around)
+            //    .info
+            //       margin: 10px
+            //       padding: 0 10px
+            //       +span-columns(10)
+            //       +display(flex)
+            //       +flex-direction(column)
+            //       +justify-content(space-between)
+            //       h3
+            //          margin: 0px 0px -6px
+            //          padding-bottom: 0px
+            //          font:
+            //             size: 50px
+            //             weight: 200px
+            //       p
+            //          font:
+            //             size: 25px
+            //             weight: 200
+            //          margin: 15px 0
+            //       ul
+            //          list-style: none
+            //       li
+            //          font:
+            //             size: 20px
+            //             weight: 100
+            //          margin: 0 0 12px
+            //       a
+            //          @extend .thick-heading
+            //          line-height: $heading-line-height*1.7
+            //          color: fade-out($dark-text, 0.12)
+            //          padding: 0px
+            //          word-wrap: break-word
+            //          text-align: center
+            //          font:
+            //             size: 30px
+            //             weight: 700
+            //          div
+            //             padding: 4px 8px 6px 15px
+            //             border:
+            //                color: fade-out($dark-text, 0.15)
+            //                width: 5px
+            //                style: solid
+            // &#bild
+            //    .img
+            //       +span-columns(12)
+            //       min-height: 450px
+            //       background:
+            //          image: url("/assets/img/etg_group_bild_2.png")
+            //          size: cover
+            //          position: 100% 100%
+            //          repeat: no-repeat
+
 
 
             // &#avslut

@@ -19,3 +19,29 @@
             padding: 15px 20px 0px
          p
             @extend .p-section
+            strong
+               // font-weight: 500
+
+.std-ul
+   text-align: left
+   list-style-type: circle
+   list-style-position: inside
+   li
+      margin-bottom: 6px
+      p
+         @extend .p-section
+         strong
+            font-weight: 500
+         display: inline
+         margin: 0
+.section-ul
+   @extend .std-ul
+   color: $accent-color
+   li
+      p
+         color: $dark-text
+         font-size: 1.5em
+         strong
+            font-weight: 600
+         +media($tablet)
+            font-size: 1.1em

@@ -4,6 +4,11 @@
 layout: recommendation
 #Titeln
 title: 'Magical Garden'
+
+categories:
+   - math: Matematik
+   - pre: Förskola
+
 #Ämne, 'Matematik', 'Svenska', 'Engelska'
 subject: 'Matematik'
 #years = årskurser, använd 'Lågstadiet', 'Mellanstadiet', eller 'Högstadiet'

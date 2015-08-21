@@ -10,6 +10,13 @@ $(function(){
    // console.log("header: " + $header.height());
    $content = $('.page-content');
 
+   $ci = $('.contact-img');
+   w = $ci.width();
+   console.log("w: " + w);
+   h = w*0.46444;
+   console.log("h: " + h);
+   // $ci.css('height', h);
+
    d = new Date();
    console.log(d.getFullYear());
    $('#copy-year').append(d.getFullYear());

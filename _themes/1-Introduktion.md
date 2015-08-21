@@ -2,7 +2,6 @@
 layout: 'theme'
 title: 'Introduktion'
 short: 'kortare beskrivning om temat här. Bla bla bla.'
-video: 'http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&iv_load_policy=3&controls=0'
 youtube-id: 'qI_g07C_Q5I'
 ---
 

@@ -3,7 +3,7 @@
    position: relative
    top: -$header-height
    +media($tablet)
-      top: -$tablet-header-height 
+      top: -$tablet-header-height
    visibility: hidden
 .contact
    #contact-intro-section
@@ -12,6 +12,7 @@
       padding: 0 0 20px
       .wrapper
          section
+            // background: green
             color: $light-text
             padding: 20px 40px 0px
             h1
@@ -24,19 +25,16 @@
                   color: $link-color
 
             ul
-               list-style: circle
-               text-align: left
-               list-style-position: inside
-               margin: 0
-               padding: 0
+               @extend .std-ul
+               // list-style: circle
+               // text-align: left
+               // list-style-position: inside
+               // margin: 0
+               // padding: 0
                li
-                  @extend .p-section
-                  font:
-                     // size: 23px
-                     // weight: 100
+                  // @extend .p-section
                   strong
-                     font-weight: bold
-
+                     // font-weight: bold
             +media($tablet)
                padding: 15px 20px 0px
    .contact-big-img
@@ -139,8 +137,6 @@
             margin: 15px 0
             color: black
             margin-left: 10px
-
-
          a
             @extend .thick-heading
             line-height: $heading-line-height*1.7
@@ -159,8 +155,6 @@
             div
                +transition(background .5s)
                padding: 4px 8px 6px 15px
-
-
                border:
                   color: fade-out($dark-text, 0.15)
                   width: 5px

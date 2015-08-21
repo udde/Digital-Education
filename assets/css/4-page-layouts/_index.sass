@@ -65,13 +65,6 @@
                      @extend .p-section
                      margin: 15px 0
 
-                  ul
-                     list-style: none
-                  li
-                     font:
-                        size: 30px
-                        weight: 500
-                     margin: 0 0 12px
                   a
                      @extend .thick-heading
                      line-height: $heading-line-height*1.7
@@ -172,7 +165,7 @@
                .info>a
                   div
                      +transition(background .5s)
-                  text-align: left
+                  text-align: center
                   &:hover
                      color: $dark-teal
                .img
@@ -191,37 +184,17 @@
                   +align-items(center)
                   .info
                      // background: #ccc
+                     margin-top: 0px
                      .content
+                        color: $dark-text
+                        // background: tomato
                         h1
                            display: none
-                           color: $dark-text
-                     color: $dark-text
-                     ul
-
-                        // list-style-position: inside
-                        li
-
-                           margin-bottom: 16px
-                           margin-left: 20px
-                           font-size: 1.4em
-                           p
-                              color: $dark-text
-                     .manifest
-                        text-align: left
-                        list-style-type: circle
-                        list-style-position: inside
-                        color: $accent-color
-                        li
-                           margin-bottom: 6px
-                           &:last-child
-                              margin-bottom: 36px
-                           p
-                              @extend .p-section
-                              display: inline
-                              color: $dark-text
-                              font-size: 0.9em
-                              margin: 0
-                              // font-weight: $bold
+                        .manifest
+                           @extend .section-ul
+                           li
+                              &:last-child
+                                 margin-bottom: 36px
                      a
                         +transition(color .3s)
                         color: fade-out($dark-text, 0.14)

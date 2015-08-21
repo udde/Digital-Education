@@ -1,6 +1,9 @@
 footer
    background: fade-out(darken($medium-teal,30),0.8)
    background: $footer-bg
+   padding-top: 20px
+   +media($tablet)
+      padding-top: 10px
    // .footer-logos
    //    min-height: 80px
    //    margin-bottom: 30px
@@ -26,7 +29,7 @@ footer
          font-size: 0.9em
       font-weight: 400
       a
-         color: $accent-color
+         @extend .link-accent
       position: relative
       // bottom: 60px
       .footer-span

@@ -1,12 +1,12 @@
 #print-banner
-   // display: none
+   display: none
    position: fixed
    top: 10px
    left: 30px
    +size(300px 40px)
    z-index: 10
-   @media print
-      display: block
+   // @media print
+   //    display: block
 .nav-item-active
    border-color: $nav-accent
    background: darken($header-bg, 3%)
@@ -99,7 +99,7 @@ header
                      // font-size: 1.0em
                      // +media($tablet)
                      //    font-size: 0.8em
-               a    
+               a
                   border-bottom: 12px $header-bg solid
                   padding: 16px 0 10px
                   +transition
