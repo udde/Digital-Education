@@ -7,7 +7,7 @@ layout: default
       <section >
          <h1>Teman</h1>
          <p>
-            Lär dig mer om nya generationens digitala läromedel här! Våra teman är kortare videoföreläsningar där vi pratar om nya generationens digitala läromedel på ett enkelt och intressant sätt.  Börja gärna med <a href="">introduktionstemat</a>. för att få en bredare förståelse över ämnet. Övriga teman kan ses i valfri ordning.
+            Lär dig mer om nya generationens digitala läromedel här! Våra teman är kortare videoföreläsningar där vi pratar om nya generationens digitala läromedel på ett enkelt och intressant sätt.  Börja gärna med {% assign f = site.themes.first%}<a href="{{f.url}}"> introduktionstemat</a> för att få en bredare förståelse över ämnet. Övriga teman kan ses i valfri ordning.
          </p>
       </section>
    </div>
@@ -27,7 +27,7 @@ layout: default
             <div class="info">
                <h3><span>Tema {{ forloop.index }} <br> </span> {{ t.title }} </h3>
                <p class="theme-media-intro">
-                  {{ t.short }} asdasdasd asdads asdad aside asdadsadas vxcvdfsdfsdffd
+                  {{ t.short }}
                </p>
                <a href="{{ t.url }}"><div><p>Tema {{ forloop.index }} <i class="fa fa-play"></i></p></div></a>
             </div>

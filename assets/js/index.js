@@ -1,5 +1,5 @@
 $(function(){
-   console.log("jquery doc rdy");
+   // console.log("jquery doc rdy");
 
    //Fixa margin när headern ska bli fixed när man skrollar
    var headerHeight = $( window ).height() - 56.5;
@@ -12,13 +12,13 @@ $(function(){
 
    $ci = $('.contact-img');
    w = $ci.width();
-   console.log("w: " + w);
+   // console.log("w: " + w);
    h = w*0.46444;
-   console.log("h: " + h);
+   // console.log("h: " + h);
    // $ci.css('height', h);
 
    d = new Date();
-   console.log(d.getFullYear());
+   // console.log(d.getFullYear());
    $('#copy-year').append(d.getFullYear());
 
    $test = $('#test');
@@ -34,7 +34,7 @@ $(function(){
    itemsMap = [];
    $('.recommendation-media-object').each(function(){
       var tmp = [];
-      console.log($(this));
+      // console.log($(this));
       $(this).find('.category-link').each(function(){
          tmp.push($(this).attr("data-categories"));
       });
@@ -48,8 +48,8 @@ $(function(){
 
 
 
-   console.log("mappen: ");
-   console.log(itemsMap);
+   // console.log("mappen: ");
+   // console.log(itemsMap);
    $l = $('.category-link');
    $l.each(function(index){
       // console.log(index);
@@ -68,7 +68,7 @@ $(function(){
          printFilter(filter);
          printItems();
 
-         console.log();
+         // console.log();
          // console.log(filter.indexOf("math"));
       });
    });
@@ -113,7 +113,7 @@ printItems = function(){
    });
 };
 printFilter = function(){
-   console.log("print filter");
+   // console.log("print filter");
    $ul = $('.filter>ul');
    $ul.empty();
    if(filter.length > 0){

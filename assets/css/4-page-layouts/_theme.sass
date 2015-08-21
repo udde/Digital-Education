@@ -6,7 +6,14 @@ iframe
    pointer-events: none
    cursor: default
    opacity: 0.3
-
+#theme-print-logo
+   display: none
+   +size(100px)
+   background: red
+   @media print
+      background: red !important
+      display: inline-block
+      float: right
 .theme
    width: 80%
    text-align: left
@@ -25,6 +32,7 @@ iframe
          cursor: default
    h1
       @extend .thin-heading
+      display: inline-block
       color: $dark-text
       // font-size: 50px
       +media($tablet)
@@ -33,8 +41,8 @@ iframe
       padding: 20px 0 0px
       margin-bottom: 0px
       @media print
-         padding: 20px 0px 0px
-         margin: 40px 0px 0px
+         padding: 10px 0px 0px
+         margin: 0px 0px 10px
    hr
       @media print
          display: none
@@ -67,6 +75,8 @@ iframe
       font-style: italic
    h4
       @extend .thick-heading
+      @media print
+         display: none
       font-weight: 600
       font-size: 18px
       padding: 0
