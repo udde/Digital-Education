@@ -1,8 +1,8 @@
 ---
 layout: theme
-title: 'Temats Titel'
+title: 'Programmering'
 short: 'Kortare beskrivning, ingress, intro...'
-video: 'http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&iv_load_policy=3&controls=0'
+youtube-id: 'OWsyrnOBsJs'
 ---
 
 
